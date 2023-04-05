@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BitmapEffectsMessageCantOpenFile" xml:space="preserve">
+    <value>選択したファイルは開けませんでした。</value>
+  </data>
+  <data name="BitmapEffectsMessageFileFormatError" xml:space="preserve">
+    <value>画像形式が違います。</value>
+  </data>
+  <data name="BitmapEffectsMessageOpenFileError" xml:space="preserve">
+    <value>ファイル読み込みエラー</value>
+  </data>
+  <data name="Gakupetit" xml:space="preserve">
+    <value>額プチ</value>
+  </data>
+  <data name="MainCancel" xml:space="preserve">
+    <value>[キャンセル]　　      : 連続処理を中止します。</value>
+  </data>
+  <data name="MainConfirmMultipleFile" xml:space="preserve">
+    <value>複数のファイルが指定されました。連続処理モードでこれらのファイルを開きますか？</value>
+  </data>
+  <data name="MainConfirmProcessing" xml:space="preserve">
+    <value>連続処理の確認</value>
+  </data>
+  <data name="MainDragColor" xml:space="preserve">
+    <value>ドラッグで色を取得</value>
+  </data>
+  <data name="MainElapsedTime" xml:space="preserve">
+    <value>処理時間：{0,4}ミリ秒</value>
+  </data>
+  <data name="MainExtention" xml:space="preserve">
+    <value>拡張子 　　　　   :</value>
+  </data>
+  <data name="MainFileNotFoundException" xml:space="preserve">
+    <value>{0}が見つかりません。このファイルをスキップし、連続処理を続けますか？</value>
+  </data>
+  <data name="MainFrameColor" xml:space="preserve">
+    <value>枠の色 　　　　　:</value>
+  </data>
+  <data name="MainFrameType" xml:space="preserve">
+    <value>枠の種類 　　　　:</value>
+  </data>
+  <data name="MainImageFileMessage" xml:space="preserve">
+    <value>画像ファイルを指定してください。</value>
+  </data>
+  <data name="MainImageSize" xml:space="preserve">
+    <value>画像サイズ 　　　  :</value>
+  </data>
+  <data name="MainMassageMultipleFile" xml:space="preserve">
+    <value>連続処理を行うには、複数の画像ファイルを選択してください。通常モードで開きます。</value>
+  </data>
+  <data name="MainMessageTransparent" xml:space="preserve">
+    <value>透明の場合、保存はJPEGではなくPNGで行ってください。また、出力ファイルサイズも大きくなりますのでご注意ください。</value>
+  </data>
+  <data name="MainNo" xml:space="preserve">
+    <value>[いいえ(N)]　　       : 保存設定ダイアログを開いて設定を変更します。</value>
+  </data>
+  <data name="MainNowOnProcessing" xml:space="preserve">
+    <value>現在、連続処理中です。連続処理を停止しますか？</value>
+  </data>
+  <data name="MainOriginalImageFolder" xml:space="preserve">
+    <value>元画像フォルダ名    :</value>
+  </data>
+  <data name="MainOutOfMemoryException" xml:space="preserve">
+    <value>{0}のオープンに失敗しました。このファイルをスキップし、連続処理を続けますか？</value>
+  </data>
+  <data name="MainPrefix" xml:space="preserve">
+    <value>プレフィックス 　       :</value>
+  </data>
+  <data name="MainPrivacyPolicyTitle" xml:space="preserve">
+    <value>プライバシーポリシー</value>
+  </data>
+  <data name="MainPrivacyPoricyText" xml:space="preserve">
+    <value>本アプリケーションは、利用者が指定した写真データに、写真の加工を行うためにアクセスします。その他の目的に利用、保持することはありません。</value>
+  </data>
+  <data name="MainProcessed" xml:space="preserve">
+    <value>{0}個のファイルを'{1}'に書き出しました。</value>
+  </data>
+  <data name="MainProcImageFiles" xml:space="preserve">
+    <value>これらのファイルを以下の設定で書き出します。</value>
+  </data>
+  <data name="MainProcImageManyFiles" xml:space="preserve">
+    <value>{0}個のファイルを以下の設定で書き出します。</value>
+  </data>
+  <data name="MainRenumber" xml:space="preserve">
+    <value>リナンバー 　　　    :</value>
+  </data>
+  <data name="MainResizeType" xml:space="preserve">
+    <value>リサイズタイプ 　      :</value>
+  </data>
+  <data name="MainSaveImageFolder" xml:space="preserve">
+    <value>保存先フォルダ名    :</value>
+  </data>
+  <data name="MainSingletonMessage" xml:space="preserve">
+    <value>多重起動はできません。</value>
+  </data>
+  <data name="MainSpecifyMultipleFile" xml:space="preserve">
+    <value>連続処理を行います。複数のファイルを選択してください。</value>
+  </data>
+  <data name="MainTitleMultipleFile" xml:space="preserve">
+    <value>複数のファイルが選択されませんでした</value>
+  </data>
+  <data name="MainValue" xml:space="preserve">
+    <value>設定値 　　　　   :</value>
+  </data>
+  <data name="MainYes" xml:space="preserve">
+    <value>[は   い(Y)]　　       : この設定で連続処理を行います。</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>しない</value>
+  </data>
+  <data name="SaveEx" xml:space="preserve">
+    <value>例：</value>
+  </data>
+  <data name="SaveFileCopyCheckMessage" xml:space="preserve">
+    <value>ﾕｰｻﾞｰ定義/絵画用のデフォルト画像10枚を{0}にコピーします。よろしいですか？コピーされた画像はユーザーが自由に変更可能です。</value>
+  </data>
+  <data name="SaveFileCopyCheckTitle" xml:space="preserve">
+    <value>ファイルコピー確認</value>
+  </data>
+  <data name="SaveFileCopyErrorMessage" xml:space="preserve">
+    <value>ファイルのコピーができませんでした。ﾕｰｻﾞｰ定義/絵画用画像が使用中の可能性があります。別のエフェクトを選択後、再度実行してください。({0})</value>
+  </data>
+  <data name="SaveFIleCopyErrorTitle" xml:space="preserve">
+    <value>ファイルコピー失敗</value>
+  </data>
+  <data name="SaveFileNameCheckMessage" xml:space="preserve">
+    <value>「{0}」はファイル名に使用できません。「_」に置き換えました。</value>
+  </data>
+  <data name="SaveFileNameCheckTitle" xml:space="preserve">
+    <value>ファイル名チェック</value>
+  </data>
+  <data name="SizeMode1" xml:space="preserve">
+    <value>オリジナル</value>
+  </data>
+  <data name="SizeMode2" xml:space="preserve">
+    <value>一覧から選択</value>
+  </data>
+  <data name="SizeMode3" xml:space="preserve">
+    <value>幅で指定</value>
+  </data>
+  <data name="SizeMode4" xml:space="preserve">
+    <value>自由なサイズ</value>
+  </data>
+  <data name="SizeMode5" xml:space="preserve">
+    <value>正方形</value>
+  </data>
+  <data name="SizeMode6" xml:space="preserve">
+    <value>不明</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>する</value>
+  </data>
+</root>

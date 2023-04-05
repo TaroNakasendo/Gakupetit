@@ -1,0 +1,625 @@
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="oirginalLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="oirginalLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>184, 65</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="oirginalLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="oirginalLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 15</value>
+  </data>
+  <data name="oirginalLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="oirginalLabel.Text" xml:space="preserve">
+    <value>640x480</value>
+  </data>
+  <data name="oirginalLabel.Name" xml:space="preserve">
+    <value>oirginalLabel</value>
+  </data>
+  <data name="oirginalLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="oirginalLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="oirginalLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>306, 144</value>
+  </data>
+  <data name="label4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 15</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>(Height = Auto)</value>
+  </data>
+  <data name="label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="label4.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="label3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 15</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Specify the image size (Width x Height).</value>
+  </data>
+  <data name="label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="label3.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="autoHeightLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="autoHeightLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>264, 144</value>
+  </data>
+  <data name="autoHeightLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="autoHeightLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 15</value>
+  </data>
+  <data name="autoHeightLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="autoHeightLabel.Text" xml:space="preserve">
+    <value>480</value>
+  </data>
+  <data name="autoHeightLabel.Name" xml:space="preserve">
+    <value>autoHeightLabel</value>
+  </data>
+  <data name="autoHeightLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="autoHeightLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="autoHeightLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="x1Label.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="x1Label.Location" type="System.Drawing.Point, System.Drawing">
+    <value>246, 144</value>
+  </data>
+  <data name="x1Label.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="x1Label.Size" type="System.Drawing.Size, System.Drawing">
+    <value>13, 15</value>
+  </data>
+  <data name="x1Label.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="x1Label.Text" xml:space="preserve">
+    <value>x</value>
+  </data>
+  <data name="x1Label.Name" xml:space="preserve">
+    <value>x1Label</value>
+  </data>
+  <data name="x1Label.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="x1Label.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="x1Label.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="x2Label.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="x2Label.Location" type="System.Drawing.Point, System.Drawing">
+    <value>246, 182</value>
+  </data>
+  <data name="x2Label.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="x2Label.Size" type="System.Drawing.Size, System.Drawing">
+    <value>13, 15</value>
+  </data>
+  <data name="x2Label.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="x2Label.Text" xml:space="preserve">
+    <value>x</value>
+  </data>
+  <data name="x2Label.Name" xml:space="preserve">
+    <value>x2Label</value>
+  </data>
+  <data name="x2Label.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="x2Label.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="x2Label.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="originalRadioButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>System</value>
+  </data>
+  <data name="originalRadioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 59</value>
+  </data>
+  <data name="originalRadioButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="originalRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 30</value>
+  </data>
+  <data name="originalRadioButton.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="originalRadioButton.Text" xml:space="preserve">
+    <value>Original size</value>
+  </data>
+  <data name="originalRadioButton.Name" xml:space="preserve">
+    <value>originalRadioButton</value>
+  </data>
+  <data name="originalRadioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="originalRadioButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="originalRadioButton.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 219</value>
+  </data>
+  <data name="groupBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="groupBox1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>364, 10</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="groupBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="groupBox1.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="cubicComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>184, 249</value>
+  </data>
+  <data name="cubicComboBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="cubicComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 23</value>
+  </data>
+  <data name="cubicComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="cubicComboBox.Name" xml:space="preserve">
+    <value>cubicComboBox</value>
+  </data>
+  <data name="cubicComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cubicComboBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="cubicComboBox.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="listComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>184, 99</value>
+  </data>
+  <data name="listComboBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="listComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 23</value>
+  </data>
+  <data name="listComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="listComboBox.Name" xml:space="preserve">
+    <value>listComboBox</value>
+  </data>
+  <data name="listComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="listComboBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="listComboBox.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="autoHeightRadioButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>System</value>
+  </data>
+  <data name="autoHeightRadioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 139</value>
+  </data>
+  <data name="autoHeightRadioButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="autoHeightRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 30</value>
+  </data>
+  <data name="autoHeightRadioButton.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="autoHeightRadioButton.Text" xml:space="preserve">
+    <value>From width</value>
+  </data>
+  <data name="autoHeightRadioButton.Name" xml:space="preserve">
+    <value>autoHeightRadioButton</value>
+  </data>
+  <data name="autoHeightRadioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="autoHeightRadioButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="autoHeightRadioButton.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="cubicRadioButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>System</value>
+  </data>
+  <data name="cubicRadioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 244</value>
+  </data>
+  <data name="cubicRadioButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="cubicRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 30</value>
+  </data>
+  <data name="cubicRadioButton.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="cubicRadioButton.Text" xml:space="preserve">
+    <value>Square trimming</value>
+  </data>
+  <data name="cubicRadioButton.Name" xml:space="preserve">
+    <value>cubicRadioButton</value>
+  </data>
+  <data name="cubicRadioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cubicRadioButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="cubicRadioButton.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="freeSizeRadioButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>System</value>
+  </data>
+  <data name="freeSizeRadioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 179</value>
+  </data>
+  <data name="freeSizeRadioButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="freeSizeRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 30</value>
+  </data>
+  <data name="freeSizeRadioButton.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="freeSizeRadioButton.Text" xml:space="preserve">
+    <value>Specify manual</value>
+  </data>
+  <data name="freeSizeRadioButton.Name" xml:space="preserve">
+    <value>freeSizeRadioButton</value>
+  </data>
+  <data name="freeSizeRadioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="freeSizeRadioButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="freeSizeRadioButton.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="listRadioButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>System</value>
+  </data>
+  <data name="listRadioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 99</value>
+  </data>
+  <data name="listRadioButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="listRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 30</value>
+  </data>
+  <data name="listRadioButton.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="listRadioButton.Text" xml:space="preserve">
+    <value>From size list</value>
+  </data>
+  <data name="listRadioButton.Name" xml:space="preserve">
+    <value>listRadioButton</value>
+  </data>
+  <data name="listRadioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="listRadioButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="listRadioButton.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="okButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>System</value>
+  </data>
+  <data name="okButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>246, 320</value>
+  </data>
+  <data name="okButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="okButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 29</value>
+  </data>
+  <data name="okButton.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="okButton.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="okButton.Name" xml:space="preserve">
+    <value>okButton</value>
+  </data>
+  <data name="okButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="okButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="okButton.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="cancelButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>System</value>
+  </data>
+  <data name="cancelButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>341, 320</value>
+  </data>
+  <data name="cancelButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="cancelButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 29</value>
+  </data>
+  <data name="cancelButton.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="cancelButton.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="cancelButton.Name" xml:space="preserve">
+    <value>cancelButton</value>
+  </data>
+  <data name="cancelButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cancelButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="cancelButton.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="autoHeightUpDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>184, 139</value>
+  </data>
+  <data name="autoHeightUpDown.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="autoHeightUpDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 23</value>
+  </data>
+  <data name="autoHeightUpDown.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="autoHeightUpDown.Name" xml:space="preserve">
+    <value>autoHeightUpDown</value>
+  </data>
+  <data name="autoHeightUpDown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="autoHeightUpDown.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="autoHeightUpDown.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="widthUpDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>184, 180</value>
+  </data>
+  <data name="widthUpDown.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="widthUpDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 23</value>
+  </data>
+  <data name="widthUpDown.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="widthUpDown.Name" xml:space="preserve">
+    <value>widthUpDown</value>
+  </data>
+  <data name="widthUpDown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="widthUpDown.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="widthUpDown.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="heightUpDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>264, 180</value>
+  </data>
+  <data name="heightUpDown.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="heightUpDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 23</value>
+  </data>
+  <data name="heightUpDown.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="heightUpDown.Name" xml:space="preserve">
+    <value>heightUpDown</value>
+  </data>
+  <data name="heightUpDown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="heightUpDown.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="heightUpDown.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>460, 378</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 5, 6, 5</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Adjust size</value>
+  </data>
+  <data name="$this.Name" xml:space="preserve">
+    <value>SizeForm</value>
+  </data>
+  <data name="$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

@@ -1,0 +1,327 @@
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="okButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="cancelButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="cancelButton.Text" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="saveFolderGroupBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="saveFolderGroupBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="saveFolderGroupBox.Text" xml:space="preserve">
+    <value>保存フォルダ</value>
+  </data>
+  <data name="targetFolderButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="targetFolderButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 29</value>
+  </data>
+  <data name="targetFolderButton.Text" xml:space="preserve">
+    <value>フォルダ指定</value>
+  </data>
+  <data name="targetFolderLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="previousFolderLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="targetFolderRadioButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="targetFolderRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 19</value>
+  </data>
+  <data name="targetFolderRadioButton.Text" xml:space="preserve">
+    <value>指定したフォルダ</value>
+  </data>
+  <data name="previousFolderRadioButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="previousFolderRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 19</value>
+  </data>
+  <data name="previousFolderRadioButton.Text" xml:space="preserve">
+    <value>前回保存を行ったフォルダ</value>
+  </data>
+  <data name="sameFolderRadioButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="sameFolderRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>215, 19</value>
+  </data>
+  <data name="sameFolderRadioButton.Text" xml:space="preserve">
+    <value>読み込んだ画像ファイルと同じフォルダ</value>
+  </data>
+  <data name="prefixGroupBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="prefixGroupBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="prefixGroupBox.Text" xml:space="preserve">
+    <value>保存するファイル名</value>
+  </data>
+  <data name="digitNumUpDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>220, 96</value>
+  </data>
+  <data name="digitNumUpDown.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="lblDigitNum.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="lblDigitNum.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 15</value>
+  </data>
+  <data name="lblDigitNum.Text" xml:space="preserve">
+    <value>桁数:</value>
+  </data>
+  <data name="extensionLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="extensionLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 15</value>
+  </data>
+  <data name="extensionLabel.Text" xml:space="preserve">
+    <value>拡張子</value>
+  </data>
+  <data name="extensionComboBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="isRenumberCheckBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="isRenumberCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 19</value>
+  </data>
+  <data name="isRenumberCheckBox.Text" xml:space="preserve">
+    <value>番号を振りなおす</value>
+  </data>
+  <data name="exLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="exLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 15</value>
+  </data>
+  <data name="prefixTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 49</value>
+  </data>
+  <data name="prefixTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="prefixLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="prefixLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 15</value>
+  </data>
+  <data name="prefixLabel.Text" xml:space="preserve">
+    <value>ファイル名の先頭につける文字を指定してください</value>
+  </data>
+  <data name="infoLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="infoLabel.Text" xml:space="preserve">
+    <value>サイズ、エフェクト、パラメータ、色の指定は、フォームを閉じる際に自動的に保存され、次回のエフェクト設定として使用されるようになります。連続処理でもこの設定にチェックする必要があります。連続処理を行うには、額プチのアイコンに、画像ファイルをまとめてドラッグアンドドロップするか、[連続処理...]メニューを選択してください。</value>
+  </data>
+  <data name="defaultButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="defaultButton.Text" xml:space="preserve">
+    <value>デフォルト</value>
+  </data>
+  <data name="jpegQualityGroupBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="jpegQualityGroupBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="jpegQualityGroupBox.Text" xml:space="preserve">
+    <value>JPEG画質</value>
+  </data>
+  <data name="jpegQualityLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 36</value>
+  </data>
+  <data name="jpegQualityLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="jpegQualityLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>338, 15</value>
+  </data>
+  <data name="jpegQualityLabel.Text" xml:space="preserve">
+    <value>(0：低画質・ファイルサイズ小 ～ 100：高画質・ファイルサイズ大)</value>
+  </data>
+  <data name="jpegQualityUpDown.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="saveIniGroupBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="saveIniGroupBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="saveIniGroupBox.Text" xml:space="preserve">
+    <value>設定ファイル</value>
+  </data>
+  <data name="saveIniCheckBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="saveIniCheckBox.Text" xml:space="preserve">
+    <value>アプリケーションデータフォルダに、設定ファイル(Gakupetit.ini) を作成し、設定を保存する。</value>
+  </data>
+  <data name="defaultBackColorGroupBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="defaultBackColorGroupBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="defaultBackColorGroupBox.Text" xml:space="preserve">
+    <value>デフォルトの背景色</value>
+  </data>
+  <data name="defaultBackColorPictureBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="colorButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAr5AAAK+QG0Yd4ZAAACtUlE
+        QVQ4T6WRXUhTYRjHT94EdRF1ZdZyzEJC6qowDCT67qJouUDFvvzIMqWVJWIaWUqJKy0dmmIJabYmOZyO
+        PuhCBWsaDudhOrc0tnQfzn143nPOPtp5Ome0teFVdPGD93nf5//jed8XA4D/IqagXbJSSl+JSF2Zn8Rv
+        Bknd7QDSnPeQi41N0X3RRBa0620Docn2UdbWH16PCsJQlmc/EV7sR9oCmxWvuRUd5vgTlpUj/FqAsnc4
+        aU8fihE4X/soe6drWSs2L4+KvKRFmrlKQM5UeCn7i0UuAH0lAI1nARQlIQHt6GZoRw9DWlo9esVJ8vun
+        c3I0X3MgVoCLgXb3LoUEjSLQCzDIZI+87n5oUQ1A/mMlSOQqcEyVW9Vtex0GlbBhlYBa7gpNQGTthAp2
+        25CIAWVrgnyJArA0FuwSoLlSZB7JmXtXnexamcpPjwiIcZGPND/RcAIO9joMF6aszZCUpQRsA0uKnBME
+        XNN5zoEanneiI7k5IkDGsqvGgf00MtUP0pY2K7UoZSirlCHNEkDmWjYoBmS8AshQBC48B32o59PqFoH8
+        r8BUx2cf5uDwc15Q3ZUKS8NHwY0XBIjZy4zEkA6nP2JQKMeA0OfB0riQFWzzfpXyekICNH8/Dhkr13IF
+        B4EXFfdXbwxax84wxGwu3NAnQcpTDLCLnCAXFkZOuBT3NjET7VtKIxMQM+K4sMCiFDDqlq0W25gQVqYv
+        QKFyHWDXMdjxCAPnZIb/28vdzt6qeObzw/WhTCi0os1bExbYBvlgUOyZcGuz2GvksBIWXXbQoREGpt+l
+        Itmd+KC6OSH2G6MxqdKODUkEHvvwIbCMHAeH+hSYhg6TX17tC8grE3yT7ZsfRPdHFu7RI5EpdN27RL13
+        ty+8r0sMvqlK/NVXm+TXdvA752W8jHBPmJji3wHsN7OS3a71kl/7AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="colorButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="UserDefinedImagesFolderGroupBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="UserDefinedImagesFolderGroupBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="UserDefinedImagesFolderGroupBox.Text" xml:space="preserve">
+    <value>ﾕｰｻﾞｰ定義/絵画画像用のフォルダ</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="imagesFolderLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="imagesFolderLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="imagesFolderLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>215, 35</value>
+  </data>
+  <data name="imagesFolderLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="imagesFolderLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>301, 21</value>
+  </data>
+  <data name="btnOpen.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnOpen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>135, 30</value>
+  </data>
+  <data name="btnOpen.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="btnOpen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 29</value>
+  </data>
+  <data name="btnOpen.Text" xml:space="preserve">
+    <value>開く...</value>
+  </data>
+  <data name="imagesFolderButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="imagesFolderButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="imagesFolderButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 29</value>
+  </data>
+  <data name="imagesFolderButton.Text" xml:space="preserve">
+    <value>フォルダ指定</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>保存時の設定</value>
+  </data>
+</root>

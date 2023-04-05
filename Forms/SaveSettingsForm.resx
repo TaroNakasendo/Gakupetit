@@ -1,0 +1,994 @@
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="okButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="okButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>556, 719</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="okButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="okButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 29</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="okButton.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="okButton.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="okButton.Name" xml:space="preserve">
+    <value>okButton</value>
+  </data>
+  <data name="okButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="okButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="okButton.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="cancelButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="cancelButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>651, 719</value>
+  </data>
+  <data name="cancelButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="cancelButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 29</value>
+  </data>
+  <data name="cancelButton.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="cancelButton.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="cancelButton.Name" xml:space="preserve">
+    <value>cancelButton</value>
+  </data>
+  <data name="cancelButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cancelButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="cancelButton.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="saveFolderGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="targetFolderButton.Name" xml:space="preserve">
+    <value>targetFolderButton</value>
+  </data>
+  <data name="targetFolderButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="targetFolderButton.Parent" xml:space="preserve">
+    <value>saveFolderGroupBox</value>
+  </data>
+  <data name="targetFolderButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="targetFolderLabel.Name" xml:space="preserve">
+    <value>targetFolderLabel</value>
+  </data>
+  <data name="targetFolderLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="targetFolderLabel.Parent" xml:space="preserve">
+    <value>saveFolderGroupBox</value>
+  </data>
+  <data name="targetFolderLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="previousFolderLabel.Name" xml:space="preserve">
+    <value>previousFolderLabel</value>
+  </data>
+  <data name="previousFolderLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="previousFolderLabel.Parent" xml:space="preserve">
+    <value>saveFolderGroupBox</value>
+  </data>
+  <data name="previousFolderLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="targetFolderRadioButton.Name" xml:space="preserve">
+    <value>targetFolderRadioButton</value>
+  </data>
+  <data name="targetFolderRadioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="targetFolderRadioButton.Parent" xml:space="preserve">
+    <value>saveFolderGroupBox</value>
+  </data>
+  <data name="targetFolderRadioButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="previousFolderRadioButton.Name" xml:space="preserve">
+    <value>previousFolderRadioButton</value>
+  </data>
+  <data name="previousFolderRadioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="previousFolderRadioButton.Parent" xml:space="preserve">
+    <value>saveFolderGroupBox</value>
+  </data>
+  <data name="previousFolderRadioButton.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="sameFolderRadioButton.Name" xml:space="preserve">
+    <value>sameFolderRadioButton</value>
+  </data>
+  <data name="sameFolderRadioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="sameFolderRadioButton.Parent" xml:space="preserve">
+    <value>saveFolderGroupBox</value>
+  </data>
+  <data name="sameFolderRadioButton.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="saveFolderGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 15</value>
+  </data>
+  <data name="saveFolderGroupBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="saveFolderGroupBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="saveFolderGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>723, 166</value>
+  </data>
+  <data name="saveFolderGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="saveFolderGroupBox.Text" xml:space="preserve">
+    <value>Save folder</value>
+  </data>
+  <data name="saveFolderGroupBox.Name" xml:space="preserve">
+    <value>saveFolderGroupBox</value>
+  </data>
+  <data name="saveFolderGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="saveFolderGroupBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="saveFolderGroupBox.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="targetFolderButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>138, 99</value>
+  </data>
+  <data name="targetFolderButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="targetFolderButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 29</value>
+  </data>
+  <data name="targetFolderButton.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="targetFolderButton.Text" xml:space="preserve">
+    <value>Specify folder...</value>
+  </data>
+  <data name="targetFolderLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="targetFolderLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>37, 131</value>
+  </data>
+  <data name="targetFolderLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="targetFolderLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>679, 21</value>
+  </data>
+  <data name="targetFolderLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="previousFolderLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="previousFolderLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>37, 75</value>
+  </data>
+  <data name="previousFolderLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="previousFolderLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>679, 20</value>
+  </data>
+  <data name="previousFolderLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="targetFolderRadioButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="targetFolderRadioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 104</value>
+  </data>
+  <data name="targetFolderRadioButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="targetFolderRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 19</value>
+  </data>
+  <data name="targetFolderRadioButton.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="targetFolderRadioButton.Text" xml:space="preserve">
+    <value>Specified folder</value>
+  </data>
+  <data name="previousFolderRadioButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="previousFolderRadioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 51</value>
+  </data>
+  <data name="previousFolderRadioButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="previousFolderRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 19</value>
+  </data>
+  <data name="previousFolderRadioButton.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="previousFolderRadioButton.Text" xml:space="preserve">
+    <value>Last using folder</value>
+  </data>
+  <data name="sameFolderRadioButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="sameFolderRadioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 24</value>
+  </data>
+  <data name="sameFolderRadioButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="sameFolderRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 19</value>
+  </data>
+  <data name="sameFolderRadioButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="sameFolderRadioButton.Text" xml:space="preserve">
+    <value>Same folder as input image</value>
+  </data>
+  <metadata name="folderBrowserDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="prefixGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="prefixGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 189</value>
+  </data>
+  <data name="prefixGroupBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="prefixGroupBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="prefixGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>723, 135</value>
+  </data>
+  <data name="prefixGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="prefixGroupBox.Text" xml:space="preserve">
+    <value>Save file name</value>
+  </data>
+  <data name="digitNumUpDown.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="digitNumUpDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>220, 99</value>
+  </data>
+  <data name="digitNumUpDown.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="digitNumUpDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 23</value>
+  </data>
+  <data name="digitNumUpDown.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lblDigitNum.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblDigitNum.Location" type="System.Drawing.Point, System.Drawing">
+    <value>175, 102</value>
+  </data>
+  <data name="lblDigitNum.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblDigitNum.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 15</value>
+  </data>
+  <data name="lblDigitNum.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="lblDigitNum.Text" xml:space="preserve">
+    <value>Digits:</value>
+  </data>
+  <data name="extensionLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="extensionLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>402, 30</value>
+  </data>
+  <data name="extensionLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="extensionLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 15</value>
+  </data>
+  <data name="extensionLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="extensionLabel.Text" xml:space="preserve">
+    <value>Extension</value>
+  </data>
+  <data name="extensionComboBox.Items" xml:space="preserve">
+    <value>.jpg</value>
+  </data>
+  <data name="extensionComboBox.Items1" xml:space="preserve">
+    <value>.bmp</value>
+  </data>
+  <data name="extensionComboBox.Items2" xml:space="preserve">
+    <value>.png</value>
+  </data>
+  <data name="extensionComboBox.Items3" xml:space="preserve">
+    <value>.gif</value>
+  </data>
+  <data name="extensionComboBox.Items4" xml:space="preserve">
+    <value>.tiff</value>
+  </data>
+  <data name="extensionComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>404, 51</value>
+  </data>
+  <data name="extensionComboBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="extensionComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 23</value>
+  </data>
+  <data name="extensionComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="isRenumberCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="isRenumberCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 101</value>
+  </data>
+  <data name="isRenumberCheckBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="isRenumberCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 19</value>
+  </data>
+  <data name="isRenumberCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="isRenumberCheckBox.Text" xml:space="preserve">
+    <value>Renumber</value>
+  </data>
+  <data name="isRenumberCheckBox.Name" xml:space="preserve">
+    <value>isRenumberCheckBox</value>
+  </data>
+  <data name="isRenumberCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="isRenumberCheckBox.Parent" xml:space="preserve">
+    <value>prefixGroupBox</value>
+  </data>
+  <data name="isRenumberCheckBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="exLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="exLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>402, 101</value>
+  </data>
+  <data name="exLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="exLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 15</value>
+  </data>
+  <data name="exLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="exLabel.Text" xml:space="preserve">
+    <value>Ex : _(InputFileName).jpg</value>
+  </data>
+  <data name="exLabel.Name" xml:space="preserve">
+    <value>exLabel</value>
+  </data>
+  <data name="exLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="exLabel.Parent" xml:space="preserve">
+    <value>prefixGroupBox</value>
+  </data>
+  <data name="exLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="prefixTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 51</value>
+  </data>
+  <data name="prefixTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="prefixTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 23</value>
+  </data>
+  <data name="prefixTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="prefixTextBox.Text" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="prefixTextBox.Name" xml:space="preserve">
+    <value>prefixTextBox</value>
+  </data>
+  <data name="prefixTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="prefixTextBox.Parent" xml:space="preserve">
+    <value>prefixGroupBox</value>
+  </data>
+  <data name="prefixTextBox.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="prefixLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="prefixLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 30</value>
+  </data>
+  <data name="prefixLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="prefixLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 15</value>
+  </data>
+  <data name="prefixLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="prefixLabel.Text" xml:space="preserve">
+    <value>Specify prefix for file Name</value>
+  </data>
+  <data name="prefixLabel.Name" xml:space="preserve">
+    <value>prefixLabel</value>
+  </data>
+  <data name="prefixLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="prefixLabel.Parent" xml:space="preserve">
+    <value>prefixGroupBox</value>
+  </data>
+  <data name="prefixLabel.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="infoLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>37, 58</value>
+  </data>
+  <data name="infoLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="infoLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>679, 100</value>
+  </data>
+  <data name="infoLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="infoLabel.Text" xml:space="preserve">
+    <value>The Specified size, Effect, Value and Color are saved on form closing. And the setting apply to effect settings on next time. Sequential processing use this setting. So if you use sequential processing, you must check this checkbox.If you want to do  sequential processing, drag and drop the image files to Gakupetit.exe icon, or select 'Sequential processing...' menu.</value>
+  </data>
+  <data name="infoLabel.Name" xml:space="preserve">
+    <value>infoLabel</value>
+  </data>
+  <data name="infoLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="infoLabel.Parent" xml:space="preserve">
+    <value>saveIniGroupBox</value>
+  </data>
+  <data name="infoLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="defaultButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="defaultButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 719</value>
+  </data>
+  <data name="defaultButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="defaultButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 29</value>
+  </data>
+  <data name="defaultButton.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="defaultButton.Text" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="defaultButton.Name" xml:space="preserve">
+    <value>defaultButton</value>
+  </data>
+  <data name="defaultButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="defaultButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="defaultButton.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="jpegQualityLabel.Name" xml:space="preserve">
+    <value>jpegQualityLabel</value>
+  </data>
+  <data name="jpegQualityLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="jpegQualityLabel.Parent" xml:space="preserve">
+    <value>jpegQualityGroupBox</value>
+  </data>
+  <data name="jpegQualityLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="jpegQualityGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 331</value>
+  </data>
+  <data name="jpegQualityGroupBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="jpegQualityGroupBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="jpegQualityGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>723, 79</value>
+  </data>
+  <data name="jpegQualityGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="jpegQualityGroupBox.Text" xml:space="preserve">
+    <value>JPEG quality</value>
+  </data>
+  <data name="jpegQualityGroupBox.Name" xml:space="preserve">
+    <value>jpegQualityGroupBox</value>
+  </data>
+  <data name="jpegQualityGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="jpegQualityGroupBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="jpegQualityGroupBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="jpegQualityLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="jpegQualityLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 34</value>
+  </data>
+  <data name="jpegQualityLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="jpegQualityLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 15</value>
+  </data>
+  <data name="jpegQualityLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="jpegQualityLabel.Text" xml:space="preserve">
+    <value>(0 : Low quality, Minimum file size - 100 : High quality, Maximum file size)</value>
+  </data>
+  <data name="jpegQualityUpDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 31</value>
+  </data>
+  <data name="jpegQualityUpDown.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="jpegQualityUpDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 23</value>
+  </data>
+  <data name="jpegQualityUpDown.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="jpegQualityUpDown.Name" xml:space="preserve">
+    <value>jpegQualityUpDown</value>
+  </data>
+  <data name="jpegQualityUpDown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="jpegQualityUpDown.Parent" xml:space="preserve">
+    <value>jpegQualityGroupBox</value>
+  </data>
+  <data name="jpegQualityUpDown.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="saveIniGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 520</value>
+  </data>
+  <data name="saveIniGroupBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="saveIniGroupBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="saveIniGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>723, 161</value>
+  </data>
+  <data name="saveIniGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="saveIniGroupBox.Text" xml:space="preserve">
+    <value>Setting file</value>
+  </data>
+  <data name="saveIniGroupBox.Name" xml:space="preserve">
+    <value>saveIniGroupBox</value>
+  </data>
+  <data name="saveIniGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="saveIniGroupBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="saveIniGroupBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="saveIniCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 22</value>
+  </data>
+  <data name="saveIniCheckBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="saveIniCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>678, 31</value>
+  </data>
+  <data name="saveIniCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="saveIniCheckBox.Text" xml:space="preserve">
+    <value>Create setting file(Gakupetit.ini) at AppData(invisible) folder. And the settings are saved to the file.</value>
+  </data>
+  <data name="saveIniCheckBox.Name" xml:space="preserve">
+    <value>saveIniCheckBox</value>
+  </data>
+  <data name="saveIniCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="saveIniCheckBox.Parent" xml:space="preserve">
+    <value>saveIniGroupBox</value>
+  </data>
+  <data name="saveIniCheckBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="defaultBackColorGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 418</value>
+  </data>
+  <data name="defaultBackColorGroupBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="defaultBackColorGroupBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="defaultBackColorGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>194, 79</value>
+  </data>
+  <data name="defaultBackColorGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="defaultBackColorGroupBox.Text" xml:space="preserve">
+    <value>Default background color</value>
+  </data>
+  <data name="defaultBackColorGroupBox.Name" xml:space="preserve">
+    <value>defaultBackColorGroupBox</value>
+  </data>
+  <data name="defaultBackColorGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="defaultBackColorGroupBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="defaultBackColorGroupBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="defaultBackColorPictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 30</value>
+  </data>
+  <data name="defaultBackColorPictureBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="defaultBackColorPictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 28</value>
+  </data>
+  <data name="defaultBackColorPictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="defaultBackColorPictureBox.Name" xml:space="preserve">
+    <value>defaultBackColorPictureBox</value>
+  </data>
+  <data name="defaultBackColorPictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="defaultBackColorPictureBox.Parent" xml:space="preserve">
+    <value>defaultBackColorGroupBox</value>
+  </data>
+  <data name="defaultBackColorPictureBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="colorButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAr2AAAK9gHCr3ADAAACtUlE
+        QVQ4T6WRXUhTYRjHT94EdRF1ZdZyzEJC6qowDCT67qJouUDFvvzIMqWVJWIaWUqJKy0dmmIJabYmOZyO
+        PuhCBWsaDudhOrc0tnQfzn143nPOPtp5Ome0teFVdPGD93nf5//jed8XA4D/IqagXbJSSl+JSF2Zn8Rv
+        Bknd7QDSnPeQi41N0X3RRBa0620Docn2UdbWH16PCsJQlmc/EV7sR9oCmxWvuRUd5vgTlpUj/FqAsnc4
+        aU8fihE4X/soe6drWSs2L4+KvKRFmrlKQM5UeCn7i0UuAH0lAI1nARQlIQHt6GZoRw9DWlo9esVJ8vun
+        c3I0X3MgVoCLgXb3LoUEjSLQCzDIZI+87n5oUQ1A/mMlSOQqcEyVW9Vtex0GlbBhlYBa7gpNQGTthAp2
+        25CIAWVrgnyJArA0FuwSoLlSZB7JmXtXnexamcpPjwiIcZGPND/RcAIO9joMF6aszZCUpQRsA0uKnBME
+        XNN5zoEanneiI7k5IkDGsqvGgf00MtUP0pY2K7UoZSirlCHNEkDmWjYoBmS8AshQBC48B32o59PqFoH8
+        r8BUx2cf5uDwc15Q3ZUKS8NHwY0XBIjZy4zEkA6nP2JQKMeA0OfB0riQFWzzfpXyekICNH8/Dhkr13IF
+        B4EXFfdXbwxax84wxGwu3NAnQcpTDLCLnCAXFkZOuBT3NjET7VtKIxMQM+K4sMCiFDDqlq0W25gQVqYv
+        QKFyHWDXMdjxCAPnZIb/28vdzt6qeObzw/WhTCi0os1bExbYBvlgUOyZcGuz2GvksBIWXXbQoREGpt+l
+        Itmd+KC6OSH2G6MxqdKODUkEHvvwIbCMHAeH+hSYhg6TX17tC8grE3yT7ZsfRPdHFu7RI5EpdN27RL13
+        ty+8r0sMvqlK/NVXm+TXdvA752W8jHBPmJji3wHsN7OS3a71kl/7AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="colorButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="colorButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>52, 29</value>
+  </data>
+  <data name="colorButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="colorButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 30</value>
+  </data>
+  <data name="colorButton.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="colorButton.Name" xml:space="preserve">
+    <value>colorButton</value>
+  </data>
+  <data name="colorButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="colorButton.Parent" xml:space="preserve">
+    <value>defaultBackColorGroupBox</value>
+  </data>
+  <data name="colorButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="colorDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>318, 19</value>
+  </metadata>
+  <data name="btnOpen.Name" xml:space="preserve">
+    <value>btnOpen</value>
+  </data>
+  <data name="btnOpen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnOpen.Parent" xml:space="preserve">
+    <value>UserDefinedImagesFolderGroupBox</value>
+  </data>
+  <data name="btnOpen.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="imagesFolderButton.Name" xml:space="preserve">
+    <value>imagesFolderButton</value>
+  </data>
+  <data name="imagesFolderButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="imagesFolderButton.Parent" xml:space="preserve">
+    <value>UserDefinedImagesFolderGroupBox</value>
+  </data>
+  <data name="imagesFolderButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="UserDefinedImagesFolderGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>215, 418</value>
+  </data>
+  <data name="UserDefinedImagesFolderGroupBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="UserDefinedImagesFolderGroupBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="UserDefinedImagesFolderGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>523, 79</value>
+  </data>
+  <data name="UserDefinedImagesFolderGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="UserDefinedImagesFolderGroupBox.Text" xml:space="preserve">
+    <value>User defined/Green back images folder</value>
+  </data>
+  <data name="UserDefinedImagesFolderGroupBox.Name" xml:space="preserve">
+    <value>UserDefinedImagesFolderGroupBox</value>
+  </data>
+  <data name="UserDefinedImagesFolderGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UserDefinedImagesFolderGroupBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="UserDefinedImagesFolderGroupBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="imagesFolderLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>247, 29</value>
+  </data>
+  <data name="imagesFolderLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="imagesFolderLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>268, 29</value>
+  </data>
+  <data name="imagesFolderLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="imagesFolderLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="imagesFolderLabel.Name" xml:space="preserve">
+    <value>imagesFolderLabel</value>
+  </data>
+  <data name="imagesFolderLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="imagesFolderLabel.Parent" xml:space="preserve">
+    <value>UserDefinedImagesFolderGroupBox</value>
+  </data>
+  <data name="imagesFolderLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnOpen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>153, 30</value>
+  </data>
+  <data name="btnOpen.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnOpen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 29</value>
+  </data>
+  <data name="btnOpen.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="btnOpen.Text" xml:space="preserve">
+    <value>Open...</value>
+  </data>
+  <data name="imagesFolderButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 30</value>
+  </data>
+  <data name="imagesFolderButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="imagesFolderButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 29</value>
+  </data>
+  <data name="imagesFolderButton.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>ja</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>752, 774</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 5, 6, 5</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Save settings</value>
+  </data>
+  <data name="folderBrowserDialog.Name" xml:space="preserve">
+    <value>folderBrowserDialog</value>
+  </data>
+  <data name="folderBrowserDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="colorDialog.Name" xml:space="preserve">
+    <value>colorDialog</value>
+  </data>
+  <data name="colorDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColorDialog, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.Name" xml:space="preserve">
+    <value>SaveSettingsForm</value>
+  </data>
+  <data name="$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>
