@@ -26,9 +26,10 @@ internal partial class MainForm : Form
 
     // 時間計測用
     private readonly Stopwatch stopwatch = new();
+    private static readonly object v = new();
 
     // 再入防止用
-    private readonly object lockObject = new();
+    private readonly object lockObject = v;
 
     // 現在の言語のIndex (0:en-US, 1:ja-JP)
     internal int languageIndex = 0;
@@ -120,7 +121,7 @@ internal partial class MainForm : Form
         if (dialogResult == DialogResult.Cancel)
         {
             // キャンセル時はファイルを1つだけ開く
-            string[] openFileNames = { fileNames[0] };
+            string[] openFileNames = [fileNames[0]];
             OpenFileNames(openFileNames);
             return;
         }
@@ -296,7 +297,7 @@ internal partial class MainForm : Form
         MinimumSize = new Size(707 * DeviceDpi / 96, 300 * DeviceDpi / 96);
 
         // 高解像度対応
-        List<Button> buttons = new() { openButton, sizeButton, effectButton, colorButton, saveButton };
+        List<Button> buttons = [openButton, sizeButton, effectButton, colorButton, saveButton];
 
         var s = (int)(DeviceDpi / 2.5f);
 
@@ -519,9 +520,9 @@ internal partial class MainForm : Form
         Dictionary<string, int> extDictionary = new() { { ".jpg", 1 }, { ".bmp", 2 }, { ".png", 3 }, { ".gif", 4 }, { ".tiff", 5 } };
 
         int index = 6;
-        if (extDictionary.ContainsKey(appSettings.Extention))
+        if (extDictionary.TryGetValue(appSettings.Extention, out int value))
         {
-            index = extDictionary[appSettings.Extention];
+            index = value;
         }
         saveFileDialog.FilterIndex = index;
 
@@ -551,6 +552,11 @@ internal partial class MainForm : Form
     private void SaveImage(string fileName)
     {
         var ext = Path.GetExtension(fileName).ToUpperInvariant();
+        if (mainPictureBox.Image == null)
+        {
+            // Optionally, handle the error or return early
+            return;
+        }
         using Bitmap bmp = new(mainPictureBox.Image, bitmapEffects.SrcSize);
         switch (ext)
         {
@@ -726,7 +732,7 @@ internal partial class MainForm : Form
         }
 
         // 単独で開く
-        string[] file = { openFileDialog.FileNames[0] };
+        string[] file = [openFileDialog.FileNames[0]];
         OpenFileNames(file);
     }
 
@@ -776,7 +782,7 @@ internal partial class MainForm : Form
     private void ColorButton_Click(object sender, EventArgs e)
     {
         // カラーダイアログ表示
-        colorDialog.CustomColors = new int[] { ColorTranslator.ToWin32(pickupPictureBox.BackColor) };
+        colorDialog.CustomColors = [ColorTranslator.ToWin32(pickupPictureBox.BackColor)];
         colorDialog.Color = pickupPictureBox.BackColor;
 
         if (colorDialog.ShowDialog() != DialogResult.OK) return;
@@ -831,7 +837,10 @@ internal partial class MainForm : Form
     private void Copy(object? sender, EventArgs e)
     {
         //画像データをクリップボードにコピーする
-        Clipboard.SetImage(mainPictureBox.Image);
+        if (mainPictureBox.Image != null)
+        {
+            Clipboard.SetImage(mainPictureBox.Image);
+        }
     }
 
     /// <summary>
@@ -1142,12 +1151,15 @@ internal partial class MainForm : Form
         var tsi = (ToolStripItem)sender;
 
         // 選択したメニューに設定されているTagを取得
-        var effectNo = int.Parse(tsi.Tag.ToString()!, CultureInfo.CurrentCulture);
+        if (tsi.Tag is not null)
+        {
+            var effectNo = int.Parse(tsi.Tag.ToString()!, CultureInfo.CurrentCulture);
 
-        // 設定の保存
-        appSettings.Effect = effectNo;
+            // 設定の保存
+            appSettings.Effect = effectNo;
 
-        ChangeEffectType();
+            ChangeEffectType();
+        }
     }
 
     /// <summary>
@@ -1170,6 +1182,11 @@ internal partial class MainForm : Form
     private void EqualButton_Click(object sender, EventArgs e)
     {
         var scrRect = Screen.GetWorkingArea(this);
+        if (mainPictureBox.Image == null)
+        {
+            // Optionally, show a message or just return
+            return;
+        }
         var realSize = mainPictureBox.Image.Size;
         realSize += new Size(wakuWidth, wakuHeight);
         Size canSize = new(scrRect.Right - scrRect.X, scrRect.Bottom - scrRect.Y);
@@ -1326,8 +1343,7 @@ internal partial class MainForm : Form
     /// <param name="e"></param>
     private void FolderOpenMenuItem_Click(object sender, EventArgs e)
     {
-        var myAssembly = Assembly.GetEntryAssembly()!;
-        var exeDir = Path.GetDirectoryName(myAssembly.Location)!;
+        string exeDir = AppContext.BaseDirectory;
         var imgDir = Path.Combine(exeDir, "images");
         Process.Start("EXPLORER.EXE", $"/e,{imgDir}");
     }

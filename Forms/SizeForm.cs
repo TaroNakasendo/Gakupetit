@@ -1,22 +1,30 @@
 ﻿using Com.Nakasendo.Gakupetit.Properties;
+using System.ComponentModel;
+using System.Runtime.Serialization;
 
 namespace Com.Nakasendo.Gakupetit;
 
+[DataContract]
 public partial class SizeForm : Form
 {
     /// <summary>
     /// ビットマップの幅
     /// </summary>
+    [DataMember]
+    [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
     public int BmpWidth { get; set; }
 
     /// <summary>
     /// ビットマップの高さ
     /// </summary>
+    [DataMember]
+    [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
     public int BmpHeight { get; set; }
-
     /// <summary>
     /// リサイズモード
     /// </summary>
+    [DataMember]
+    [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
     public byte ResizeType { get; set; }
 
     /// <summary>

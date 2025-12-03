@@ -2,21 +2,28 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net7.0-windows</TargetFramework>
+    <TargetFramework>net10.0-windows10.0.26100.1</TargetFramework>
     <Nullable>enable</Nullable>
-    <UseWindowsForms>true</UseWindowsForms>
+    <UseWindowsForms>True</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationIcon>Forms\g.ico</ApplicationIcon>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RootNamespace>Com.Nakasendo.Gakupetit</RootNamespace>
     <GenerateAssemblyInfo>True</GenerateAssemblyInfo>
-    <Version>8.0.0</Version>
+    <Version>9.0.0</Version>
     <NeutralLanguage>en</NeutralLanguage>
     <Platforms>AnyCPU;ARM32;ARM64;x64;x86</Platforms>
     <DebugType>portable</DebugType>
     <NoWarn>1701;1702</NoWarn>
     <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <SupportedOSPlatformVersion>10.0.26100.1</SupportedOSPlatformVersion>
+    <StartupObject>Com.Nakasendo.Gakupetit.Program</StartupObject>
+
+    <!-- Added to avoid MSBuild attempting to locate WinRT.Runtime.dll when it's not present.
+         This prevents the '[System.IO.Path]::GetDirectoryName('')' error. -->
+    <IncludeWindowsSDKRefFrameworkReferences>false</IncludeWindowsSDKRefFrameworkReferences>
+    <CsWinRTGenerateInteropAssembly>false</CsWinRTGenerateInteropAssembly>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)'=='Debug'">
@@ -58,7 +65,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Magick.NET-Q8-AnyCPU" Version="13.0.1" />
+    <PackageReference Include="Magick.NET-Q8-AnyCPU" Version="14.9.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -97,6 +104,10 @@
     </None>
     <None Update="Images\UserDefined6.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
 

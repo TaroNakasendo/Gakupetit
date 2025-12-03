@@ -25,7 +25,11 @@ class E015_Film : EffectBase, IEffect
         {
             var version = Application.ProductVersion[0];
 
-            var s = $"{Application.ProductName.ToUpper()}!{version} FILM        ©2005-{BitmapEffects.ShotDateTime.Year}";
+            var shotDateTimeYear = BitmapEffects.ShotDateTime.Year != 1
+                ? BitmapEffects.ShotDateTime.Year
+                : DateTime.Now.Year;
+            var productName = Application.ProductName ?? string.Empty;
+            var s = $"{productName.ToUpper()}!{version} FILM        ©2005-{shotDateTimeYear}";
 
             using var g = Graphics.FromImage(bmp);
             g.SmoothingMode = SmoothingMode.AntiAlias;
