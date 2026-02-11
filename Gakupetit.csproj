@@ -17,13 +17,13 @@
     <DebugType>portable</DebugType>
     <NoWarn>1701;1702</NoWarn>
     <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
-    <SupportedOSPlatformVersion>10.0.26100.1</SupportedOSPlatformVersion>
     <StartupObject>Com.Nakasendo.Gakupetit.Program</StartupObject>
 
     <!-- Added to avoid MSBuild attempting to locate WinRT.Runtime.dll when it's not present.
          This prevents the '[System.IO.Path]::GetDirectoryName('')' error. -->
     <IncludeWindowsSDKRefFrameworkReferences>false</IncludeWindowsSDKRefFrameworkReferences>
     <CsWinRTGenerateInteropAssembly>false</CsWinRTGenerateInteropAssembly>
+    <SupportedOSPlatformVersion>10.0.26100.1</SupportedOSPlatformVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)'=='Debug'">
@@ -65,7 +65,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Magick.NET-Q8-AnyCPU" Version="14.9.1" />
+    <PackageReference Include="Magick.NET-Q8-AnyCPU" Version="14.10.2" />
   </ItemGroup>
 
   <ItemGroup>
