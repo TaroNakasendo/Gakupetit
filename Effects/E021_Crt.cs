@@ -41,19 +41,19 @@ class E021_Crt(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEffect
 
             using GraphicsPath gp = new();
             gp.AddBeziers(new PointF[] {
-                        new PointF(ww * 115, hh * 115), // 左上の点
-                        new PointF(ww * (115 + 140), hh * (115 - 140)), // 左上コントロールポイント
-                        new PointF(ww * 1600 - (ww * (115 + 140)), hh * (115 - 140)), // 右上コントロールポイント
-                        new PointF(ww * 1600 - ww * 115, hh * 115), // 右上の点
-                        new PointF(ww * 1600 - (ww * (115 - 140)), hh * (115 + 140)), // 右上コントロールポイント2
-                        new PointF(ww * 1600 - (ww * (115 - 140)), hh * 1200 - (hh * (115 + 140))), // 右下コントロールポイント
-                        new PointF(ww * 1600 - ww * 115, hh * 1200 - hh * 115), // 右下の点
-                        new PointF(ww * 1600 - (ww * (115 + 140)), hh * 1200 - hh * (115 - 140)), // 右下コントロールポイント2
-                        new PointF(ww * (115 + 140), hh * 1200 - hh * (115 - 140)), // 左下コントロールポイント
-                        new PointF(ww * 115, hh * 1200 - hh * 115), // 左下の点
-                        new PointF(ww * (115 - 140), hh * 1200 - (hh * (115 + 140))), // 左下コントロールポイント2
-                        new PointF(ww * (115 - 140), hh * (115 + 140)), // 左上コントロールポイント2
-                        new PointF(ww * 115, hh * 115), // 左上の点
+                        new(ww * 115, hh * 115), // 左上の点
+                        new(ww * (115 + 140), hh * (115 - 140)), // 左上コントロールポイント
+                        new(ww * 1600 - (ww * (115 + 140)), hh * (115 - 140)), // 右上コントロールポイント
+                        new(ww * 1600 - ww * 115, hh * 115), // 右上の点
+                        new(ww * 1600 - (ww * (115 - 140)), hh * (115 + 140)), // 右上コントロールポイント2
+                        new(ww * 1600 - (ww * (115 - 140)), hh * 1200 - (hh * (115 + 140))), // 右下コントロールポイント
+                        new(ww * 1600 - ww * 115, hh * 1200 - hh * 115), // 右下の点
+                        new(ww * 1600 - (ww * (115 + 140)), hh * 1200 - hh * (115 - 140)), // 右下コントロールポイント2
+                        new(ww * (115 + 140), hh * 1200 - hh * (115 - 140)), // 左下コントロールポイント
+                        new(ww * 115, hh * 1200 - hh * 115), // 左下の点
+                        new(ww * (115 - 140), hh * 1200 - (hh * (115 + 140))), // 左下コントロールポイント2
+                        new(ww * (115 - 140), hh * (115 + 140)), // 左上コントロールポイント2
+                        new(ww * 115, hh * 115), // 左上の点
                         }); // 中央下の点　
 
             g.FillPath(Brushes.Black, gp);
@@ -95,12 +95,12 @@ class E021_Crt(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEffect
             var negaMask = CreateNegativeMask(clopMask);
             var m = Math.Max(w, h);
             g2.DrawImage(negaMask, m / 40, m / 40, w - m * 2 / 40, h - m * 2 / 40);
-            LinearGradientBrush gb = new(new RectangleF(m / 20, 0, w / 2 - m / 20, h), Color.FromArgb(v * 255 / 100, 0, 0, 0), Color.Black, LinearGradientMode.Horizontal);
+            LinearGradientBrush gb = new(new(m / 20, 0, w / 2 - m / 20, h), Color.FromArgb(v * 255 / 100, 0, 0, 0), Color.Black, LinearGradientMode.Horizontal);
             g2.FillRectangle(gb, g2.VisibleClipBounds);
-            g2.FillRectangle(Brushes.Black, new RectangleF(w / 2, 0, w / 2, h));
-            gb = new(new RectangleF(0, m / 20, w, h / 2 - m / 20), Color.FromArgb(v * 255 / 100, 0, 0, 0), Color.Black, LinearGradientMode.Vertical);
+            g2.FillRectangle(Brushes.Black, new(w / 2, 0, w / 2, h));
+            gb = new(new(0, m / 20, w, h / 2 - m / 20), Color.FromArgb(v * 255 / 100, 0, 0, 0), Color.Black, LinearGradientMode.Vertical);
             g2.FillRectangle(gb, g2.VisibleClipBounds);
-            g2.FillRectangle(Brushes.Black, new RectangleF(0, h / 2, w, h / 2));
+            g2.FillRectangle(Brushes.Black, new(0, h / 2, w, h / 2));
 
             // 効果を高めるため、自分で自分にマスク
             shiftedClopMask = Masking(v * 7 / 10, color, shiftedClopMask, shiftedClopMask);

@@ -2,17 +2,15 @@
 
 namespace Com.Nakasendo.Gakupetit.EffectEtc;
 
-class Default : EffectBase, IEffect
+class Default(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEffect
 {
-    public Default(BitmapEffects bitmapEffects) : base(bitmapEffects) { }
-
     public int EffectId => -1;
-    public string[] Names => new[] { "", "" };
+    public string[] Names => ["", ""];
     public bool IsBackChecked => true;
     public int DefaultValue => 10;
-    public string[] Descriptions => new[] {
+    public string[] Descriptions => [
         $"Default effect. Displays the initial screen. Slider values are unused.",
-        $"既定のエフェクトです。初期画面を表示します。スライダー値は未使用です。" };
+        $"既定のエフェクトです。初期画面を表示します。スライダー値は未使用です。" ];
     public Color GetDefaultColor(Color nowColor) => nowColor;
 
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)

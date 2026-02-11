@@ -73,91 +73,91 @@ static class DrawLed
         if ((bitFlag & 0x01) != 0)
         {
             g.FillPolygon(brush, new PointF[] {
-                    new PointF(x + 66 * c, y +  0 * c),
-                    new PointF(x +166 * c, y +  0 * c),
-                    new PointF(x +171 * c, y +  7 * c),
-                    new PointF(x +139 * c, y + 35 * c),
-                    new PointF(x + 80 * c, y + 35 * c),
-                    new PointF(x + 59 * c, y +  6 * c) });
+                    new(x + 66 * c, y +  0 * c),
+                    new(x +166 * c, y +  0 * c),
+                    new(x +171 * c, y +  7 * c),
+                    new(x +139 * c, y + 35 * c),
+                    new(x + 80 * c, y + 35 * c),
+                    new(x + 59 * c, y +  6 * c) });
         }
 
         // 左上
         if ((bitFlag & 0x02) != 0)
         {
             g.FillPolygon(brush, new PointF[] {
-                    new PointF(x + 50 * c, y + 16 * c),
-                    new PointF(x + 73 * c, y + 41 * c),
-                    new PointF(x + 60 * c, y +118 * c),
-                    new PointF(x + 38 * c, y +136 * c),
-                    new PointF(x + 25 * c, y +118 * c),
-                    new PointF(x + 41 * c, y + 21 * c) });
+                    new(x + 50 * c, y + 16 * c),
+                    new(x + 73 * c, y + 41 * c),
+                    new(x + 60 * c, y +118 * c),
+                    new(x + 38 * c, y +136 * c),
+                    new(x + 25 * c, y +118 * c),
+                    new(x + 41 * c, y + 21 * c) });
         }
 
         // 右上
         if ((bitFlag & 0x04) != 0)
         {
             g.FillPolygon(brush, new PointF[] {
-                    new PointF(x +178 * c, y + 16 * c),
-                    new PointF(x +183 * c, y + 22 * c),
-                    new PointF(x +167 * c, y +118 * c),
-                    new PointF(x +147 * c, y +134 * c),
-                    new PointF(x +133 * c, y +118 * c),
-                    new PointF(x +146 * c, y + 42 * c) });
+                    new(x +178 * c, y + 16 * c),
+                    new(x +183 * c, y + 22 * c),
+                    new(x +167 * c, y +118 * c),
+                    new(x +147 * c, y +134 * c),
+                    new(x +133 * c, y +118 * c),
+                    new(x +146 * c, y + 42 * c) });
         }
 
         // 中央
         if ((bitFlag & 0x08) != 0)
         {
             g.FillPolygon(brush, new PointF[] {
-                    new PointF(x + 64 * c, y +126 * c),
-                    new PointF(x +123 * c, y +126 * c),
-                    new PointF(x +138 * c, y +143 * c),
-                    new PointF(x +118 * c, y +160 * c),
-                    new PointF(x + 60 * c, y +160 * c),
-                    new PointF(x + 45 * c, y +143 * c) });
+                    new(x + 64 * c, y +126 * c),
+                    new(x +123 * c, y +126 * c),
+                    new(x +138 * c, y +143 * c),
+                    new(x +118 * c, y +160 * c),
+                    new(x + 60 * c, y +160 * c),
+                    new(x + 45 * c, y +143 * c) });
         }
 
         // 左下
         if ((bitFlag & 0x10) != 0)
         {
             g.FillPolygon(brush, new PointF[] {
-                    new PointF(x + 36 * c, y +150 * c),
-                    new PointF(x + 50 * c, y +167 * c),
-                    new PointF(x + 39 * c, y +242 * c),
-                    new PointF(x +  5 * c, y +271 * c),
-                    new PointF(x +  0 * c, y +262 * c),
-                    new PointF(x + 16 * c, y +167 * c) });
+                    new(x + 36 * c, y +150 * c),
+                    new(x + 50 * c, y +167 * c),
+                    new(x + 39 * c, y +242 * c),
+                    new(x +  5 * c, y +271 * c),
+                    new(x +  0 * c, y +262 * c),
+                    new(x + 16 * c, y +167 * c) });
         }
 
         // 右下
         if ((bitFlag & 0x20) != 0)
         {
             g.FillPolygon(brush, new PointF[] {
-                    new PointF(x +145 * c, y +150 * c),
-                    new PointF(x +158 * c, y +167 * c),
-                    new PointF(x +142 * c, y +263 * c),
-                    new PointF(x +133 * c, y +269 * c),
-                    new PointF(x +110 * c, y +242 * c),
-                    new PointF(x +123 * c, y +167 * c) });
+                    new(x +145 * c, y +150 * c),
+                    new(x +158 * c, y +167 * c),
+                    new(x +142 * c, y +263 * c),
+                    new(x +133 * c, y +269 * c),
+                    new(x +110 * c, y +242 * c),
+                    new(x +123 * c, y +167 * c) });
         }
 
         // 中下
         if ((bitFlag & 0x40) != 0)
         {
             g.FillPolygon(brush, new PointF[] {
-                    new PointF(x + 43 * c, y +251 * c),
-                    new PointF(x +102 * c, y +251 * c),
-                    new PointF(x +124 * c, y +277 * c),
-                    new PointF(x +115 * c, y +285 * c),
-                    new PointF(x + 17 * c, y +285 * c),
-                    new PointF(x + 12 * c, y +277 * c) });
+                    new(x + 43 * c, y +251 * c),
+                    new(x +102 * c, y +251 * c),
+                    new(x +124 * c, y +277 * c),
+                    new(x +115 * c, y +285 * c),
+                    new(x + 17 * c, y +285 * c),
+                    new(x + 12 * c, y +277 * c) });
         }
 
         // :
         if ((bitFlag & 0x80) != 0)
         {
-            g.FillEllipse(brush, new RectangleF(x + 85 * c, y + 58 * c, 42 * c, 42 * c));
-            g.FillEllipse(brush, new RectangleF(x + 63 * c, y + 185 * c, 42 * c, 42 * c));
+            g.FillEllipse(brush, new　RectangleF(x + 85 * c, y + 58 * c, 42 * c, 42 * c));
+            g.FillEllipse(brush, new　RectangleF(x + 63 * c, y + 185 * c, 42 * c, 42 * c));
         }
     }
 }

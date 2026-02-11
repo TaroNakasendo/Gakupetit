@@ -1,5 +1,4 @@
 using Com.Nakasendo.Gakupetit.Properties;
-using System.Threading;
 
 namespace Com.Nakasendo.Gakupetit;
 

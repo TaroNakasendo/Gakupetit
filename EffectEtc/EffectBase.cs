@@ -1,6 +1,5 @@
 ﻿using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
-using System.Threading.Tasks;
 using static System.Math;
 
 namespace Com.Nakasendo.Gakupetit.EffectEtc;

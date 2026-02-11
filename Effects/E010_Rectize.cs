@@ -1,5 +1,4 @@
-﻿using System;
-using Com.Nakasendo.Gakupetit.EffectEtc;
+﻿using Com.Nakasendo.Gakupetit.EffectEtc;
 using System.Drawing.Drawing2D;
 using static System.Math;
 
