@@ -2,3 +2,6 @@ obj
 bin
 .vs
 *.user
+# Ignore local test signing certificates
+Gakupetit.Package/*.pfx
+*.pfx
