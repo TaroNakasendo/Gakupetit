@@ -3,7 +3,8 @@
     <!-- Packaging project for MSIX. Open this project in Visual Studio and use "Associate App with the Store" to configure Identity/Publisher. -->
     <TargetFramework>net10.0</TargetFramework>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <AppxPackageSigningEnabled>false</AppxPackageSigningEnabled>
+    <!-- Enable package signing for local testing. The actual PFX should NOT be committed to VCS. -->
+    <AppxPackageSigningEnabled>true</AppxPackageSigningEnabled>
     <Platforms>AnyCPU;x64;x86;ARM64</Platforms>
     <PackageCertificateKeyFile>gakupetit-test.pfx</PackageCertificateKeyFile>
   </PropertyGroup>
