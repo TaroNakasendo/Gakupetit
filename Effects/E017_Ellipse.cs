@@ -8,12 +8,12 @@ class E017_Ellipse : EffectBase, IEffect
     public E017_Ellipse(BitmapEffects bitmapEffects) : base(bitmapEffects) { }
 
     public int EffectId => 17;
-    public string[] Names => new[] { "Oval", "楕円" };
+    public string[] Names => ["Oval", "楕円"];
     public bool IsBackChecked => true;
     public int DefaultValue => 50;
-    public string[] Descriptions => new[] {
+    public string[] Descriptions => [
         $"It's an oval cropping effect. Adjust edge blur with the slider.",
-        $"楕円に切りぬくエフェクトです。スライダーで楕円のふちのぼかし具合を変更できます。" };
+        $"楕円に切りぬくエフェクトです。スライダーで楕円のふちのぼかし具合を変更できます。" ];
     public Color GetDefaultColor(Color nowColor) => nowColor;
 
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)

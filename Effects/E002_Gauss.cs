@@ -5,17 +5,16 @@ using static System.Math;
 
 namespace Com.Nakasendo.Gakupetit.Effects;
 
-class E002_Gauss : EffectBase, IEffect
+class E002_Gauss(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEffect
 {
-    public E002_Gauss(BitmapEffects bitmapEffects) : base(bitmapEffects) { }
 
     public int EffectId => 2;
-    public string[] Names => new[] { "Blur", "ガウスぼかし" };
+    public string[] Names => ["Blur", "ガウスぼかし"];
     public bool IsBackChecked => true;
     public int DefaultValue => 40;
-    public string[] Descriptions => new[] {
+    public string[] Descriptions => [
         $"It's a Gaussian blur edge effect. Adjust the blur intensity with the slider.",
-        $"ふちにガウスぼかしをつけるエフェクトです。スライダーでぼかし具合を変更できます。" };
+        $"ふちにガウスぼかしをつけるエフェクトです。スライダーでぼかし具合を変更できます。" ];
     public Color GetDefaultColor(Color nowColor) => nowColor;
 
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)

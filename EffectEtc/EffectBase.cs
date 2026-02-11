@@ -1,5 +1,6 @@
 ﻿using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
+using System.Threading.Tasks;
 using static System.Math;
 
 namespace Com.Nakasendo.Gakupetit.EffectEtc;
@@ -58,17 +59,23 @@ abstract class EffectBase
             Marshal.Copy(inPtr, inRgbValues, 0, size);
             Marshal.Copy(outPtr, outRgbValues, 0, size);
 
-            //4byteずつ進む
-            for (var j = 0; j < size; j += 4)
+            // 行ごとに並列処理して高速化
+            var height = bmp.Height;
+            Parallel.For(0, height, j =>
             {
-                var b = inRgbValues[j + 0];
-                var g = inRgbValues[j + 1];
-                var r = inRgbValues[j + 2];
+                var rowOffset = j * stride;
+                for (var i = 0; i < stride; i += 4)
+                {
+                    var idx = rowOffset + i;
+                    var b = inRgbValues[idx + 0];
+                    var g = inRgbValues[idx + 1];
+                    var r = inRgbValues[idx + 2];
 
-                if (b != 0) outRgbValues[j + 0] += (byte)((color.B - outRgbValues[j + 0]) * b / 255);
-                if (g != 0) outRgbValues[j + 1] += (byte)((color.G - outRgbValues[j + 1]) * g / 255);
-                if (r != 0) outRgbValues[j + 2] += (byte)((color.R - outRgbValues[j + 2]) * r / 255);
-            }
+                    if (b != 0) outRgbValues[idx + 0] = (byte)(outRgbValues[idx + 0] + (byte)((color.B - outRgbValues[idx + 0]) * b / 255));
+                    if (g != 0) outRgbValues[idx + 1] = (byte)(outRgbValues[idx + 1] + (byte)((color.G - outRgbValues[idx + 1]) * g / 255));
+                    if (r != 0) outRgbValues[idx + 2] = (byte)(outRgbValues[idx + 2] + (byte)((color.R - outRgbValues[idx + 2]) * r / 255));
+                }
+            });
 
             // byte列をbitmapに復元し、メモリのロックを開放する
             Marshal.Copy(outRgbValues, 0, outPtr, size);

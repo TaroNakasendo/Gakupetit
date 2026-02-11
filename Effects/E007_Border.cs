@@ -7,12 +7,12 @@ class E007_Border : EffectBase, IEffect
     public E007_Border(BitmapEffects bitmapEffects) : base(bitmapEffects) { }
 
     public int EffectId => 7;
-    public string[] Names => new[] { "Stripe", "ボーダー" };
+    public string[] Names => ["Stripe", "ボーダー"];
     public bool IsBackChecked => true;
     public int DefaultValue => 37;
-    public string[] Descriptions => new[] {
+    public string[] Descriptions => [
         $"It adds vintage TV scanlines. Adjust intensity (10 levels) and stripe width (in 10s) with the slider.",
-        $"昔のアナログテレビのような走査線を付加します。スライダーで濃さ(10段階)と縞々の幅(10ごと)を変更できます。" };
+        $"昔のアナログテレビのような走査線を付加します。スライダーで濃さ(10段階)と縞々の幅(10ごと)を変更できます。" ];
     public Color GetDefaultColor(Color nowColor) => nowColor;
 
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)

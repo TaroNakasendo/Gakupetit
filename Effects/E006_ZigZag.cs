@@ -4,17 +4,16 @@ using System.Runtime.InteropServices;
 
 namespace Com.Nakasendo.Gakupetit.Effects;
 
-class E006_ZigZag : EffectBase, IEffect
+class E006_ZigZag(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEffect
 {
-    public E006_ZigZag(BitmapEffects bitmapEffects) : base(bitmapEffects) { }
 
     public int EffectId => 6;
-    public string[] Names => new[] { "Zigzag", "ジグザグ" };
+    public string[] Names => ["Zigzag", "ジグザグ"];
     public bool IsBackChecked => true;
     public int DefaultValue => 20;
-    public string[] Descriptions => new[] {
+    public string[] Descriptions => [
         $"It's a zigzag frame effect. Adjust frame size with the slider.",
-        $"枠をジグザグに切り抜くエフェクトです。スライダーで枠の大きさを変更できます。" };
+        $"枠をジグザグに切り抜くエフェクトです。スライダーで枠の大きさを変更できます。" ];
     public Color GetDefaultColor(Color nowColor) => nowColor;
 
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)

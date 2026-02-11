@@ -5,17 +5,16 @@ using System.Runtime.InteropServices;
 
 namespace Com.Nakasendo.Gakupetit.Effects;
 
-class E021_Crt : EffectBase, IEffect
+class E021_Crt(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEffect
 {
-    public E021_Crt(BitmapEffects bitmapEffects) : base(bitmapEffects) { }
 
     public int EffectId => 21;
-    public string[] Names => new[] { "CRT", "ブラウン管" };
+    public string[] Names => ["CRT", "ブラウン管"];
     public bool IsBackChecked => true;
     public int DefaultValue => 42;
-    public string[] Descriptions => new[] {
+    public string[] Descriptions => [
         $"The effect is as if projected on a narlog TV. You can change the brightness with the slider.",
-        $"アナログテレビで映し出されているようなエフェクトです。スライダーで明るさを変更できます。" };
+        $"アナログテレビで映し出されているようなエフェクトです。スライダーで明るさを変更できます。" ];
     public Color GetDefaultColor(Color nowColor) => nowColor;
 
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)

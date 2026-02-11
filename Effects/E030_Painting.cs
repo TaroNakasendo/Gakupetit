@@ -5,17 +5,16 @@ using System.Runtime.InteropServices;
 
 namespace Com.Nakasendo.Gakupetit.Effects;
 
-class E030_Painting : EffectBase, IEffect
+class E030_Painting(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEffect
 {
-    public E030_Painting(BitmapEffects bitmapEffects) : base(bitmapEffects) { }
 
     public int EffectId { get; set; } = 30;
-    public string[] Names => new[] { $"Green back {PaintingId}", $"絵画 {PaintingId}" };
+    public string[] Names => [$"Green back {PaintingId}", $"絵画 {PaintingId}"];
     public bool IsBackChecked => false;
     public int DefaultValue { get; set; } = 0;
-    public string[] Descriptions => new[] {
+    public string[] Descriptions => [
         $"This is effect No. {PaintingId}, which looks like a picture frame. You can change the color range of transparency with the slider.",
-        $"絵画の額縁のようなエフェクトその{PaintingId}です。スライダーで透過の色範囲を変更できます。" };
+        $"絵画の額縁のようなエフェクトその{PaintingId}です。スライダーで透過の色範囲を変更できます。" ];
     public Color GetDefaultColor(Color nowColor) => Color.FromArgb(255, 255, 255);
     public string ImagesFolder { get; set; } = @".\Images";
 

@@ -1,24 +1,26 @@
-﻿using Com.Nakasendo.Gakupetit.EffectEtc;
+﻿using System;
+using Com.Nakasendo.Gakupetit.EffectEtc;
 using System.Drawing.Drawing2D;
 using static System.Math;
 
 namespace Com.Nakasendo.Gakupetit.Effects;
 
-class E010_Rectize : EffectBase, IEffect
+class E010_Rectize(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEffect
 {
-    public E010_Rectize(BitmapEffects bitmapEffects) : base(bitmapEffects) { }
 
     public int EffectId => 10;
-    public string[] Names => new[] { "Rectangle", "四角" };
+    public string[] Names => ["Rectangle", "四角"];
     public bool IsBackChecked => true;
     public int DefaultValue => 36;
-    public string[] Descriptions => new[] {
+    public string[] Descriptions => [
         $"Blur the edges with random dots of a single color.  Use the slider to change the area.",
-        $"ふちをランダムな単一色のドットでぼかします。スライダーで範囲を変更できます。" };
+        $"ふちをランダムな単一色のドットでぼかします。スライダーで範囲を変更できます。" ];
     public Color GetDefaultColor(Color nowColor) => Color.White;
 
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)
     {
+        if (srcBitmap == null) throw new ArgumentNullException(nameof(srcBitmap));
+
         var w = srcBitmap.Width;
         var h = srcBitmap.Height;
         Bitmap bmp = new(w, h);

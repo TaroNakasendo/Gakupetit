@@ -8,12 +8,12 @@ class E016_UnderConstruction : EffectBase, IEffect
     public E016_UnderConstruction(BitmapEffects bitmapEffects) : base(bitmapEffects) { }
 
     public int EffectId => 16;
-    public string[] Names => new[] { "Under construction", "工事中" };
+    public string[] Names => ["Under construction", "工事中"];
     public bool IsBackChecked => false;
     public int DefaultValue => 40;
-    public string[] Descriptions => new[] {
+    public string[] Descriptions => [
         $"It's a construction frame effect. Adjust frame size with the slider.",
-        $"工事中の枠をつけるエフェクトです。スライダーで枠の大きさを変更できます。" };
+        $"工事中の枠をつけるエフェクトです。スライダーで枠の大きさを変更できます。" ];
     public Color GetDefaultColor(Color nowColor) => Color.Gold;
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)
     {

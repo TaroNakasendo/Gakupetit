@@ -5,17 +5,16 @@ using static System.Math;
 
 namespace Com.Nakasendo.Gakupetit.Effects;
 
-class E018_Bevel : EffectBase, IEffect
+class E018_Bevel(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEffect
 {
-    public E018_Bevel(BitmapEffects bitmapEffects) : base(bitmapEffects) { }
 
     public int EffectId => 18;
-    public string[] Names => new[] { "Bevel", "べベル" };
+    public string[] Names => ["Bevel", "べベル"];
     public bool IsBackChecked => true;
     public int DefaultValue => 10;
-    public string[] Descriptions => new[] {
+    public string[] Descriptions => [
         $"It's a semi-transparent bevel effect. Adjust bevel width with the slider.",
-        $"半透明で立体的ななベベルを付加します。スライダーでベベル幅を変更できます。" };
+        $"半透明で立体的ななベベルを付加します。スライダーでベベル幅を変更できます。" ];
     public Color GetDefaultColor(Color nowColor) => nowColor;
 
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)

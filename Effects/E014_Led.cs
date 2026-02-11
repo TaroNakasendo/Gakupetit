@@ -2,17 +2,16 @@
 
 namespace Com.Nakasendo.Gakupetit.Effects;
 
-class E014_Led : EffectBase, IEffect
+class E014_Led(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEffect
 {
-    public E014_Led(BitmapEffects bitmapEffects) : base(bitmapEffects) { }
 
     public int EffectId => 14;
-    public string[] Names => new[] { "Date and time", "撮影日時" };
+    public string[] Names => ["Date and time", "撮影日時"];
     public bool IsBackChecked => false;
     public int DefaultValue => 69;
-    public string[] Descriptions => new[] {
+    public string[] Descriptions => [
         $"It's a date and time display effect. Use the slider to adjust display size and toggle time visibility (alt by 1).",
-        $"日時表示を付加するエフェクトです。スライダーで表示サイズと時刻の有無(1ずつ交互)を変更できます。" };
+        $"日時表示を付加するエフェクトです。スライダーで表示サイズと時刻の有無(1ずつ交互)を変更できます。" ];
     public Color GetDefaultColor(Color nowColor) => Color.Red;
 
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)

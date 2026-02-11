@@ -9,12 +9,12 @@ class E015_Film : EffectBase, IEffect
     public E015_Film(BitmapEffects bitmapEffects) : base(bitmapEffects) { }
 
     public int EffectId => 15;
-    public string[] Names => new[] { "Film", "フィルム" };
+    public string[] Names => ["Film", "フィルム"];
     public bool IsBackChecked => true;
     public int DefaultValue => 52;
-    public string[] Descriptions => new[] {
+    public string[] Descriptions => [
         $"It's a photo film-like frame effect. Adjust the frame size with the slider.",
-        $"写真フィルムのような枠をつけるエフェクトです。スライダーで枠の大きさを変更できます。" };
+        $"写真フィルムのような枠をつけるエフェクトです。スライダーで枠の大きさを変更できます。" ];
     public Color GetDefaultColor(Color nowColor) => nowColor;
 
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)

@@ -4,17 +4,16 @@ using System.Runtime.InteropServices;
 
 namespace Com.Nakasendo.Gakupetit.Effects;
 
-class E004_RandomDot : EffectBase, IEffect
+class E004_RandomDot(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEffect
 {
-    public E004_RandomDot(BitmapEffects bitmapEffects) : base(bitmapEffects) { }
 
     public int EffectId => 4;
-    public string[] Names => new[] { "Random dots", "ランダムドット" };
+    public string[] Names => ["Random dots", "ランダムドット"];
     public bool IsBackChecked => true;
     public int DefaultValue => 20;
-    public string[] Descriptions => new[] {
+    public string[] Descriptions => [
         $"Blur the edges with random dots of a single color.  Use the slider to change the area.",
-        $"ふちをランダムな単一色のドットでぼかします。スライダーで範囲を変更できます。" };
+        $"ふちをランダムな単一色のドットでぼかします。スライダーで範囲を変更できます。" ];
     public Color GetDefaultColor(Color nowColor) => nowColor;
 
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)

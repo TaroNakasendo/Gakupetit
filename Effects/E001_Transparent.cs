@@ -5,17 +5,16 @@ using static System.Math;
 
 namespace Com.Nakasendo.Gakupetit.Effects;
 
-class E001_Transparent : EffectBase, IEffect
+class E001_Transparent(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEffect
 {
-    public E001_Transparent(BitmapEffects bitmapEffects) : base(bitmapEffects) { }
 
     public int EffectId => 1;
-    public string[] Names => new[] { "Transparent", "透明" };
+    public string[] Names => ["Transparent", "透明"];
     public bool IsBackChecked => true;
     public int DefaultValue => 70;
-    public string[] Descriptions => new[] {
+    public string[] Descriptions => [
         $"It's a transparent blur effect. Adjust blur with the slider. Output must be in PNG.",
-        $"透明ぼかしをつけるエフェクトです。スライダーで枠のボケ具合を変更できます。出力はPNGにする必要があります。" };
+        $"透明ぼかしをつけるエフェクトです。スライダーで枠のボケ具合を変更できます。出力はPNGにする必要があります。" ];
     public Color GetDefaultColor(Color nowColor) => Color.Transparent;
 
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)

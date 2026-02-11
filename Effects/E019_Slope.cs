@@ -4,17 +4,16 @@ using static System.Math;
 
 namespace Com.Nakasendo.Gakupetit.Effects;
 
-class E019_Slope : EffectBase, IEffect
+class E019_Slope(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEffect
 {
-    public E019_Slope(BitmapEffects bitmapEffects) : base(bitmapEffects) { }
 
     public int EffectId => 19;
-    public string[] Names => new[] { "Tilt", "斜め" };
+    public string[] Names => ["Tilt", "斜め"];
     public bool IsBackChecked => true;
     public int DefaultValue => 23;
-    public string[] Descriptions => new[] {
+    public string[] Descriptions => [
         $"It's a diagonal line frame effect. Adjust line thickness and count with the slider.",
-        $"斜め線で枠を装飾するエフェクトです。スライダーで斜め線の太さと本数を変更できます。" };
+        $"斜め線で枠を装飾するエフェクトです。スライダーで斜め線の太さと本数を変更できます。" ];
     public Color GetDefaultColor(Color nowColor) => Color.White;
 
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)

@@ -7,12 +7,12 @@ class E022_Mirror : EffectBase, IEffect
     public E022_Mirror(BitmapEffects bitmapEffects) : base(bitmapEffects) { }
 
     public int EffectId => 22;
-    public string[] Names => new[] { "Mirror", "鏡" };
+    public string[] Names => ["Mirror", "鏡"];
     public bool IsBackChecked => true;
     public int DefaultValue => 6;
-    public string[] Descriptions => new[] {
+    public string[] Descriptions => [
         $"It's a water reflection effect. Use the slider to adjust water level and reflection intensity (2 types).",
-        $"水面に鏡面反射するようなエフェクトです。スライダーで水面の位置と反射度合(2種類)を変更できます。" };
+        $"水面に鏡面反射するようなエフェクトです。スライダーで水面の位置と反射度合(2種類)を変更できます。" ];
     public Color GetDefaultColor(Color nowColor) => nowColor;
 
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)

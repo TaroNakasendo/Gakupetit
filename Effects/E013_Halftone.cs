@@ -3,21 +3,22 @@ using System.Drawing.Drawing2D;
 
 namespace Com.Nakasendo.Gakupetit.Effects;
 
-class E013_Halftone : EffectBase, IEffect
+class E013_Halftone(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEffect
 {
-    public E013_Halftone(BitmapEffects bitmapEffects) : base(bitmapEffects) { }
 
     public int EffectId => 13;
-    public string[] Names => new[] { "Halftone", "網点" };
+    public string[] Names => ["Halftone", "網点"];
     public bool IsBackChecked => true;
     public int DefaultValue => 20;
-    public string[] Descriptions => new[] {
+    public string[] Descriptions => [
         $"It's a polka dot border effect. Adjust the dot size with the slider.",
-        $"ふちを水玉模様で彩るエフェクトです。スライダーで水玉の大きさを変更できます。" };
+        $"ふちを水玉模様で彩るエフェクトです。スライダーで水玉の大きさを変更できます。" ];
     public Color GetDefaultColor(Color nowColor) => nowColor;
 
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)
     {
+        if (srcBitmap == null) throw new ArgumentNullException(nameof(srcBitmap));
+
         Bitmap bmp = new(srcBitmap);
 
         try

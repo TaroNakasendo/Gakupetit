@@ -4,17 +4,16 @@ using static System.Math;
 
 namespace Com.Nakasendo.Gakupetit.Effects;
 
-class E009_Heart : EffectBase, IEffect
+class E009_Heart(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEffect
 {
-    public E009_Heart(BitmapEffects bitmapEffects) : base(bitmapEffects) { }
 
     public int EffectId => 9;
-    public string[] Names => new[] { "Heart", "ハート" };
+    public string[] Names => ["Heart", "ハート"];
     public bool IsBackChecked => true;
     public int DefaultValue => 20;
-    public string[] Descriptions => new[] {
+    public string[] Descriptions => [
         $"It's a heart-shaped center cutout effect. Adjust the heart blur intensity with the slider.",
-        $"中央をハート形に切り抜くエフェクトです。スライダーでハートのぼかし具合を変更できます。" };
+        $"中央をハート形に切り抜くエフェクトです。スライダーでハートのぼかし具合を変更できます。" ];
     public Color GetDefaultColor(Color nowColor) => Color.FromArgb(255, 245, 240);
 
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)

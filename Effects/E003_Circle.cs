@@ -5,17 +5,16 @@ using static System.Math;
 
 namespace Com.Nakasendo.Gakupetit.Effects;
 
-class E003_Circle : EffectBase, IEffect
+class E003_Circle(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEffect
 {
-    public E003_Circle(BitmapEffects bitmapEffects) : base(bitmapEffects) { }
 
     public int EffectId => 3;
-    public string[] Names => new[] { "Circle", "まんまる" };
+    public string[] Names => ["Circle", "まんまる"];
     public bool IsBackChecked => true;
     public int DefaultValue => 34;
-    public string[] Descriptions => new[] {
+    public string[] Descriptions => [
         $"It crops a circular center. Adjust blur with the slider.",
-        $"画像中央を正円に切り抜きます。スライダーでぼけ具合を変更できます。" };
+        $"画像中央を正円に切り抜きます。スライダーでぼけ具合を変更できます。" ];
     public Color GetDefaultColor(Color nowColor) => nowColor;
 
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)

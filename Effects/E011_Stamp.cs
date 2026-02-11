@@ -8,12 +8,12 @@ class E011_Stamp : EffectBase, IEffect
     public E011_Stamp(BitmapEffects bitmapEffects) : base(bitmapEffects) { }
 
     public int EffectId => 11;
-    public string[] Names => new[] { "Stamp", "切手" };
+    public string[] Names => ["Stamp", "切手"];
     public bool IsBackChecked => true;
     public int DefaultValue => 100;
-    public string[] Descriptions => new[] {
+    public string[] Descriptions => [
         $"It's a stamp-like frame effect. Adjust frame size with the slider.",
-        $"切手のような枠をつけるエフェクトです。スライダーで枠の大きさを変更できます。" };
+        $"切手のような枠をつけるエフェクトです。スライダーで枠の大きさを変更できます。" ];
     public Color GetDefaultColor(Color nowColor) => nowColor;
 
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)

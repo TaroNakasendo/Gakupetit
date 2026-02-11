@@ -3,17 +3,16 @@ using System.Drawing.Drawing2D;
 
 namespace Com.Nakasendo.Gakupetit.Effects;
 
-class E024_UserDefined : EffectBase, IEffect
+class E024_UserDefined(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEffect
 {
-    public E024_UserDefined(BitmapEffects bitmapEffects) : base(bitmapEffects) { }
 
     public int EffectId { get; set; } = 24;
-    public string[] Names => new[] { $"User defined {CustomId}", $"ﾕｰｻﾞｰ定義 {CustomId}" };
+    public string[] Names => [$"User defined {CustomId}", $"ﾕｰｻﾞｰ定義 {CustomId}"];
     public bool IsBackChecked => true;
     public int DefaultValue { get; set; } = 0;
-    public string[] Descriptions => new[] {
+    public string[] Descriptions => [
         $"It's user custom frame effect No. {CustomId}. Adjust image blur with the slider.",
-        $"ユーザーが画像で枠を定義できるエフェクトその{CustomId}です。スライダーで画像のぼけ具合を変更できます。" };
+        $"ユーザーが画像で枠を定義できるエフェクトその{CustomId}です。スライダーで画像のぼけ具合を変更できます。" ];
     public Color GetDefaultColor(Color nowColor) => (EffectId == 25) ? Color.White : nowColor;
     public string ImagesFolder { get; set; } = @".\Images";
 

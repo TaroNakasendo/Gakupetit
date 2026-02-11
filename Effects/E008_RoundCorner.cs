@@ -3,17 +3,16 @@ using System.Drawing.Drawing2D;
 
 namespace Com.Nakasendo.Gakupetit.Effects;
 
-class E008_RoundCorner : EffectBase, IEffect
+class E008_RoundCorner(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEffect
 {
-    public E008_RoundCorner(BitmapEffects bitmapEffects) : base(bitmapEffects) { }
 
     public int EffectId => 8;
-    public string[] Names => new[] { "Rounded corners", "角丸" };
+    public string[] Names => ["Rounded corners", "角丸"];
     public bool IsBackChecked => true;
     public int DefaultValue => 34;
-    public string[] Descriptions => new[] {
+    public string[] Descriptions => [
         $"This is a rounded corner effect. You can change the size of the rounded corners with the slider.",
-        $"角丸のエフェクトです。スライダーで角丸の大きさを変更できます。" };
+        $"角丸のエフェクトです。スライダーで角丸の大きさを変更できます。" ];
     public Color GetDefaultColor(Color nowColor) => nowColor;
 
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)

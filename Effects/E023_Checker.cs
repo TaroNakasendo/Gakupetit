@@ -7,12 +7,12 @@ class E023_Checker : EffectBase, IEffect
     public E023_Checker(BitmapEffects bitmapEffects) : base(bitmapEffects) { }
 
     public int EffectId => 23;
-    public string[] Names => new[] { "Checker", "チェッカー" };
+    public string[] Names => ["Checker", "チェッカー"];
     public bool IsBackChecked => true;
     public int DefaultValue => 8;
-    public string[] Descriptions => new[] {
+    public string[] Descriptions => [
         $"It adds checkered frames. Adjust size and type (even: inner/outer, odd: outer only) with the slider.",
-        $"チェック模様の枠を付加します。スライダーで大きさ、タイプ(偶数:内外、奇数:外側のみ)を変更できます。" };
+        $"チェック模様の枠を付加します。スライダーで大きさ、タイプ(偶数:内外、奇数:外側のみ)を変更できます。" ];
     public Color GetDefaultColor(Color nowColor) => nowColor;
 
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)

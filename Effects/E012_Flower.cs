@@ -7,12 +7,12 @@ class E012_Flower : EffectBase, IEffect
     public E012_Flower(BitmapEffects bitmapEffects) : base(bitmapEffects) { }
 
     public int EffectId => 12;
-    public string[] Names => new[] { "Flower", "フラワー" };
+    public string[] Names => ["Flower", "フラワー"];
     public bool IsBackChecked => true;
     public int DefaultValue => 5;
-    public string[] Descriptions => new[] {
+    public string[] Descriptions => [
         $"It's a flower-shaped cutout effect. Adjust the number of petals with the slider.",
-        $"花ような切り抜きをつけるエフェクトです。スライダーで花びらの数を変更できます。" };
+        $"花ような切り抜きをつけるエフェクトです。スライダーで花びらの数を変更できます。" ];
     public Color GetDefaultColor(Color nowColor) => nowColor;
 
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)
