@@ -14,7 +14,7 @@ class E036_PixelBezel(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), 
         "Creates a chunky pixelated bezel around the image. Adjust the bezel size with the slider.",
         "画像の周囲に太めのピクセル風枠を作ります。スライダーで枠のサイズを調整します。"
     ];
-    public Color GetDefaultColor(Color nowColor) => Color.White;
+    public Color GetDefaultColor(Color _) => Color.White;
 
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)
     {

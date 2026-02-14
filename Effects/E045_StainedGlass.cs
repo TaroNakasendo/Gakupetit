@@ -7,14 +7,14 @@ class E045_StainedGlass(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects)
 {
     public int EffectId => 45;
     public string[] Names => ["Stained Glass", "ステンドグラス"];
-    public bool IsBackChecked => true;
+    public bool IsBackChecked => false;
     public int DefaultValue => 40;
     public string[] Descriptions => [
         "Adds a beautiful stained glass border. Each piece has unique colors and textures.",
         "美しいステンドグラスの枠を追加します。一枚一枚が異なる色と質感を持っています。"
     ];
 
-    public Color GetDefaultColor(Color nowColor) => Color.FromArgb(255, 200, 100, 50);
+    public Color GetDefaultColor(Color _) => Color.FromArgb(200, 100, 50);
 
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)
     {

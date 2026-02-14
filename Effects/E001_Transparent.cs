@@ -15,7 +15,7 @@ class E001_Transparent(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects),
     public string[] Descriptions => [
         $"It's a transparent blur effect. Adjust blur with the slider. Output must be in PNG.",
         $"透明ぼかしをつけるエフェクトです。スライダーで枠のボケ具合を変更できます。出力はPNGにする必要があります。" ];
-    public Color GetDefaultColor(Color nowColor) => Color.Transparent;
+    public Color GetDefaultColor(Color _) => Color.Transparent;
 
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)
     {

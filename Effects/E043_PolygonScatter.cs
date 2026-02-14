@@ -13,7 +13,7 @@ class E043_PolygonScatter(BitmapEffects bitmapEffects) : EffectBase(bitmapEffect
         "Adds a frame by scattering random semi-transparent polygons of various sizes. Adjust the amount with the slider.",
         "様々な大きさの半透明な多角形をランダムにちりばめた枠を追加します。スライダーで量を調整します。"
     ];
-    public Color GetDefaultColor(Color nowColor) => Color.FromArgb(255, nowColor);
+    public Color GetDefaultColor(Color nowColor) => nowColor;
 
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)
     {

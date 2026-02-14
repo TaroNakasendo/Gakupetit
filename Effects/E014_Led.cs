@@ -12,7 +12,7 @@ class E014_Led(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEffect
     public string[] Descriptions => [
         $"It's a date and time display effect. Use the slider to adjust display size and toggle time visibility (alt by 1).",
         $"日時表示を付加するエフェクトです。スライダーで表示サイズと時刻の有無(1ずつ交互)を変更できます。" ];
-    public Color GetDefaultColor(Color nowColor) => Color.Red;
+    public Color GetDefaultColor(Color _) => Color.Red;
 
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)
     {

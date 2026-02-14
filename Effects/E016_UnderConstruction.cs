@@ -14,7 +14,7 @@ class E016_UnderConstruction : EffectBase, IEffect
     public string[] Descriptions => [
         $"It's a construction frame effect. Adjust frame size with the slider.",
         $"工事中の枠をつけるエフェクトです。スライダーで枠の大きさを変更できます。" ];
-    public Color GetDefaultColor(Color nowColor) => Color.Gold;
+    public Color GetDefaultColor(Color _) => Color.Gold;
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)
     {
         Bitmap bmp = new(srcBitmap);

@@ -14,7 +14,7 @@ class E019_Slope(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEffe
     public string[] Descriptions => [
         $"It's a diagonal line frame effect. Adjust line thickness and count with the slider.",
         $"斜め線で枠を装飾するエフェクトです。スライダーで斜め線の太さと本数を変更できます。" ];
-    public Color GetDefaultColor(Color nowColor) => Color.White;
+    public Color GetDefaultColor(Color _) => Color.White;
 
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)
     {

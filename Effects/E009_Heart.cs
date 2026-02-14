@@ -14,7 +14,7 @@ class E009_Heart(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEffe
     public string[] Descriptions => [
         $"It's a heart-shaped center cutout effect. Adjust the heart blur intensity with the slider.",
         $"中央をハート形に切り抜くエフェクトです。スライダーでハートのぼかし具合を変更できます。" ];
-    public Color GetDefaultColor(Color nowColor) => Color.FromArgb(255, 245, 240);
+    public Color GetDefaultColor(Color _) => Color.FromArgb(255, 240, 240);
 
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)
     {

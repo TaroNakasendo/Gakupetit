@@ -14,7 +14,7 @@ class E047_Spotlight(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), I
         "Lights up the center with a warm bulb color and darkens the surroundings. Adjust the circle size with the slider.",
         "中央を電球色で明るく照らし、周囲を暗くします。スライダーで光の円の大きさを調整します。"
     ];
-    public Color GetDefaultColor(Color nowColor) => Color.FromArgb(255, 200, 130);
+    public Color GetDefaultColor(Color _) => Color.FromArgb(255, 200, 130);
 
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)
     {

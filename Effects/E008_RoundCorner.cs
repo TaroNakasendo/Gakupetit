@@ -9,7 +9,7 @@ class E008_RoundCorner(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects),
     public int EffectId => 8;
     public string[] Names => ["Rounded corners", "角丸"];
     public bool IsBackChecked => true;
-    public int DefaultValue => 34;
+    public int DefaultValue => 15;
     public string[] Descriptions => [
         $"This is a rounded corner effect. You can change the size of the rounded corners with the slider.",
         $"角丸のエフェクトです。スライダーで角丸の大きさを変更できます。" ];

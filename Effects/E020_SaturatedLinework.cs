@@ -14,7 +14,7 @@ class E020_SaturatedLinework : EffectBase, IEffect
     public string[] Descriptions => [
         $"Concentration line effect. The number of concentration lines can be changed with the slider.",
         $"集中線のエフェクトです。スライダーで集中戦の本数を変更できます。" ];
-    public Color GetDefaultColor(Color nowColor) => Color.White;
+    public Color GetDefaultColor(Color _) => Color.White;
 
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)
     {

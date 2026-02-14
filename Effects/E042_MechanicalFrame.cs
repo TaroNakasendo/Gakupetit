@@ -13,7 +13,7 @@ class E042_MechanicalFrame(BitmapEffects bitmapEffects) : EffectBase(bitmapEffec
         "Adds a heavy mechanical monitor frame with random ribs and depressions. No bolts.",
         "リブや窪みが配置された重厚なメカニカル枠を追加します。ボルトはありません。"
     ];
-    public Color GetDefaultColor(Color nowColor) => Color.FromArgb(255, 65, 68, 72);
+    public Color GetDefaultColor(Color _) => Color.FromArgb(65, 68, 72);
 
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)
     {

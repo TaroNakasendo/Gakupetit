@@ -32,7 +32,7 @@ class Default(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEffect
             {
                 var blend = new ColorBlend
                 {
-                    Colors = new[] { Color.Black, Color.FromArgb(10, 12, 48), Color.FromArgb(200, 60, 32) },
+                    Colors = [Color.Black, Color.FromArgb(10, 12, 48), Color.FromArgb(200, 60, 32)],
                     Positions = new[] { 0f, 0.65f, 1f }
                 };
                 bgBrush.InterpolationColors = blend;

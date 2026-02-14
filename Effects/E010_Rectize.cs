@@ -14,7 +14,7 @@ class E010_Rectize(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEf
     public string[] Descriptions => [
         $"Blur the edges with random dots of a single color.  Use the slider to change the area.",
         $"ふちをランダムな単一色のドットでぼかします。スライダーで範囲を変更できます。" ];
-    public Color GetDefaultColor(Color nowColor) => Color.White;
+    public Color GetDefaultColor(Color _) => Color.White;
 
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)
     {
