@@ -207,9 +207,6 @@
   <data name="MainSaveImageFolder" xml:space="preserve">
     <value>Destination image folder      :</value>
   </data>
-  <data name="MainSingletonMessage" xml:space="preserve">
-    <value>This software can't be launched multiple times.</value>
-  </data>
   <data name="MainSpecifyMultipleFile" xml:space="preserve">
     <value>Sequential processing mode. Please specify multiple files.</value>
   </data>

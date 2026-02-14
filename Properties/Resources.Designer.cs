@@ -331,15 +331,6 @@ namespace Com.Nakasendo.Gakupetit.Properties {
         }
         
         /// <summary>
-        ///   This software can&apos;t be launched multiple times. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string MainSingletonMessage {
-            get {
-                return ResourceManager.GetString("MainSingletonMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Sequential processing mode. Please specify multiple files. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string MainSpecifyMultipleFile {

@@ -207,9 +207,6 @@
   <data name="MainSaveImageFolder" xml:space="preserve">
     <value>保存先フォルダ名    :</value>
   </data>
-  <data name="MainSingletonMessage" xml:space="preserve">
-    <value>多重起動はできません。</value>
-  </data>
   <data name="MainSpecifyMultipleFile" xml:space="preserve">
     <value>連続処理を行います。複数のファイルを選択してください。</value>
   </data>
