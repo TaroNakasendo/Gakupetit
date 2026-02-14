@@ -1257,6 +1257,18 @@ internal partial class MainForm : Form
             23 => new E023_Checker(bitmapEffects),
             24 or 25 or 26 or 27 or 28 or 29 => new E024_UserDefined(bitmapEffects) { ImagesFolder = appSettings.ImagesFolder, EffectId = id },
             30 or 31 or 32 or 33 or 34 or 35 => new E030_Painting(bitmapEffects) { ImagesFolder = appSettings.ImagesFolder, EffectId = id },
+            36 => new E036_PixelBezel(bitmapEffects),
+            37 => new E037_Scribble(bitmapEffects),
+            38 => new E038_Stitch(bitmapEffects),
+            39 => new E039_BrushStroke(bitmapEffects),
+            40 => new E040_MaskingTape(bitmapEffects),
+            41 => new E041_Glitch(bitmapEffects),
+            42 => new E042_MechanicalFrame(bitmapEffects),
+            43 => new E043_PolygonScatter(bitmapEffects),
+            44 => new E044_IvyFrame(bitmapEffects),
+            45 => new E045_StainedGlass(bitmapEffects),
+            46 => new E046_TornPaper(bitmapEffects),
+            47 => new E047_Spotlight(bitmapEffects),
 
             // 新規エフェクトはここに追加すること(下記EffectNumも更新すること)
             _ => new Default(bitmapEffects),
@@ -1264,9 +1276,9 @@ internal partial class MainForm : Form
     }
 
     /// <summary>
-    /// エフェクトの数
+    /// エフェクトの数 (全 48 種類)
     /// </summary>
-    internal static int EffectNum => 36;
+    internal static int EffectNum => 48;
 
     /// <summary>
     /// メニュー用の黒ビットマップを作成する

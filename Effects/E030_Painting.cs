@@ -15,7 +15,7 @@ class E030_Painting(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IE
     public string[] Descriptions => [
         $"This is effect No. {PaintingId}, which looks like a picture frame. You can change the color range of transparency with the slider.",
         $"絵画の額縁のようなエフェクトその{PaintingId}です。スライダーで透過の色範囲を変更できます。" ];
-    public Color GetDefaultColor(Color nowColor) => Color.FromArgb(255, 255, 255);
+    public Color GetDefaultColor(Color nowColor) => Color.White;
     public string ImagesFolder { get; set; } = @".\Images";
 
     private int PaintingId => EffectId - 30 + 1;

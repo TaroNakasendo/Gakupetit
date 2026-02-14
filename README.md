@@ -16,7 +16,7 @@
 ## 動作環境
 
 - Windows 11 64bit
-- Microsoft .NET 10 がインストールされていない場合は、インストールしてください。
+- Microsoft .NET 10 がインストールされていない場合はインストールしてください。
 
 ## インストール・アンインストール方法
 
@@ -25,7 +25,7 @@
 
 ## 開発環境
 
-- Microsoft Visual Studio Community 2026 (64bit), Windows 11
+- Microsoft Visual Studio Community 2026 (64bit), Windows 11, Visual Studio Code, Google Antigravity, Anthropic Claude Code, GitHub Copilot
 
 ## ライセンス
 
@@ -45,6 +45,7 @@
 
   ```cmd
   git clone https://github.com/TaroNakasendo/Gakupetit
+  cd Gakupetit
   ```
 
 ## もし必要な場合、どうやったら助けを得られるか？

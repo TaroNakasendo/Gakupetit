@@ -88,6 +88,45 @@ public partial class EffectForm : Form
         var y = (int)(120 * mag);
         SetIconSpacing(effectListView, x, y);
 
+        // ウィンドウサイズの最適化
+        var count = MainForm.EffectNum;
+        var screen = Screen.GetWorkingArea(Owner ?? this);
+
+        // 6列くらいがちょうどよい
+        var columns = 6;
+        var rows = (int)Math.Ceiling((double)count / columns);
+
+        // 画面幅に収まらなければ列を減らす
+        var layoutIterationSafety = 0;
+        const int MaxLayoutIterations = 1000;
+        while (columns * x > screen.Width * 0.9 && columns > 1 && layoutIterationSafety < MaxLayoutIterations)
+        {
+            columns--;
+            rows = (int)Math.Ceiling((double)count / columns);
+            layoutIterationSafety++;
+        }
+
+        // 画面高さに収まらなければ列を増やす
+        layoutIterationSafety = 0;
+        while (rows * y > screen.Height * 0.9 && columns * x < screen.Width * 0.9 && layoutIterationSafety < MaxLayoutIterations)
+        {
+            columns++;
+            rows = (int)Math.Ceiling((double)count / columns);
+            layoutIterationSafety++;
+        }
+
+        // 必要なクライアントサイズ (スクロールバーと境界線の分)
+        var w = columns * x + SystemInformation.VerticalScrollBarWidth + 8;
+        var h = rows * y + 5;
+
+        // 最大サイズ制限
+        w = Math.Min(w, (int)(screen.Width * 0.9));
+        h = Math.Min(h, (int)(screen.Height * 0.9));
+
+        ClientSize = new Size(w, h);
+        effectListView.Dock = DockStyle.Fill;
+        CenterToParent();
+
         effectListView.Visible = true;
         ResumeLayout();
     }
