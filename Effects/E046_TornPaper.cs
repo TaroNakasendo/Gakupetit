@@ -8,12 +8,12 @@ class E046_TornPaper(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), I
     public int EffectId => 46;
     public string[] Names => ["Torn Paper", "破れ紙"];
     public bool IsBackChecked => true;
-    public int DefaultValue => 30;
+    public int DefaultValue => 8;
     public string[] Descriptions => [
         "Adds a torn paper edge effect around the image. Adjust the roughness and border width with the slider.",
         "画像の縁を紙を破ったようなギザギザの枠にします。スライダーで破れの荒さと枠幅を調整します。"
     ];
-    public Color GetDefaultColor(Color _) => Color.FromArgb(245, 240, 230);
+    public Color GetDefaultColor(Color _) => Color.FromArgb(255, 255, 246);
 
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)
     {

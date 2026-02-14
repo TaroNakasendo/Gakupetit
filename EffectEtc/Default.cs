@@ -1,4 +1,5 @@
 using System.Drawing.Drawing2D;
+using System.Drawing.Text;
 
 namespace Com.Nakasendo.Gakupetit.EffectEtc;
 
@@ -77,6 +78,10 @@ class Default(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEffect
             sf.Alignment = StringAlignment.Center;
             sf.LineAlignment = StringAlignment.Center;
 
+            g.CompositingQuality = CompositingQuality.HighQuality;
+            g.InterpolationMode = InterpolationMode.HighQualityBicubic;
+            g.PixelOffsetMode = PixelOffsetMode.HighQuality;
+            g.TextRenderingHint = TextRenderingHint.AntiAliasGridFit;
             using Font font = new("Tahoma", 64 * 96 / g.DpiX);
 
             var version = Application.ProductVersion[0];
