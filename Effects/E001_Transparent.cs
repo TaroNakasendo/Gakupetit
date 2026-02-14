@@ -21,10 +21,7 @@ class E001_Transparent(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects),
     {
         int w = srcBitmap.Width;
         int h = srcBitmap.Height;
-
-        Bitmap bmp = new(srcBitmap);
-
-        try
+        return CreateBitmap(srcBitmap, bmp =>
         {
             using var g = Graphics.FromImage(bmp);
             g.Clear(Color.Black);
@@ -113,16 +110,8 @@ class E001_Transparent(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects),
             // byte列をbitmapに復元し、メモリのロックを開放する
             Marshal.Copy(outRgbValues, 0, outPtr, size);
             bmp.UnlockBits(outBmpData);
-            bmp = AlphaMasking(srcBitmap, bmp);
-
-        }
-        catch (Exception)
-        {
-            bmp.Dispose();
-            throw;
-        }
-
-        return bmp;
+            return AlphaMasking(srcBitmap, bmp);
+        });
     }
 
     /// <summary>
@@ -134,9 +123,7 @@ class E001_Transparent(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects),
     /// <returns></returns>
     private static Bitmap AlphaMasking(Bitmap srcBitmap, Bitmap maskBitmap)
     {
-        Bitmap bmp = new(srcBitmap);
-
-        try
+        return CreateBitmap(srcBitmap, bmp =>
         {
             // bitmapをメモリ上にロックします
             Rectangle rect = new(0, 0, bmp.Width, bmp.Height);
@@ -164,13 +151,7 @@ class E001_Transparent(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects),
             Marshal.Copy(outRgbValues, 0, outPtr, size);
             bmp.UnlockBits(outBmpData);
             maskBitmap.UnlockBits(inBmpData);
-        }
-        catch (Exception)
-        {
-            bmp.Dispose();
-            throw;
-        }
-
-        return bmp;
+            return bmp;
+        });
     }
 }

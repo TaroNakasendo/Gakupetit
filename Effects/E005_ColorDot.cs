@@ -29,9 +29,7 @@ class E005_ColorDot(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IE
     /// <returns>ビットマップ</returns>
     protected override Bitmap Masking(int v, Color color, Bitmap srcBitmap, Bitmap maskBitmap)
     {
-        Bitmap bmp = new(srcBitmap);
-
-        try
+        return CreateBitmap(srcBitmap, bmp =>
         {
             // bitmapをメモリ上にロックします
             Rectangle rect = new(0, 0, bmp.Width, bmp.Height);
@@ -66,13 +64,7 @@ class E005_ColorDot(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IE
             Marshal.Copy(outRgbValues, 0, outPtr, size);
             maskBitmap.UnlockBits(inBmpData);
             bmp.UnlockBits(outBmpData);
-        }
-        catch (Exception)
-        {
-            bmp.Dispose();
-            throw;
-        }
-
-        return bmp;
+            return bmp;
+        });
     }
 }

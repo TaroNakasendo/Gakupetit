@@ -24,10 +24,7 @@ class E030_Painting(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IE
     {
         var w = srcBitmap.Width;
         var h = srcBitmap.Height;
-
-
-        Bitmap bmp = new(srcBitmap);
-        try
+        return CreateBitmap(srcBitmap, bmp =>
         {
             using var g = Graphics.FromImage(bmp);
             g.Clear(Color.White);
@@ -54,15 +51,8 @@ class E030_Painting(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IE
                 g.DrawString($"Image not found.", font, Brushes.Red, 0, 0);
             }
 
-            bmp = Masking(v, color, srcBitmap, bmp);
-        }
-        catch (Exception)
-        {
-            bmp.Dispose();
-            throw;
-        }
-
-        return bmp;
+            return Masking(v, color, srcBitmap, bmp);
+        });
     }
 
 
@@ -73,9 +63,7 @@ class E030_Painting(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IE
     /// <returns>ビットマップ</returns>
     protected override Bitmap Masking(int v, Color color, Bitmap srcBitmap, Bitmap maskBitmap)
     {
-        Bitmap bmp = new(srcBitmap);
-
-        try
+        return CreateBitmap(srcBitmap, bmp =>
         {
             // bitmapをメモリ上にロックします
             var w = bmp.Width;
@@ -119,13 +107,7 @@ class E030_Painting(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IE
             Marshal.Copy(outRgbValues, 0, outPtr, size);
             maskBitmap.UnlockBits(inBmpData);
             bmp.UnlockBits(outBmpData);
-        }
-        catch (Exception)
-        {
-            bmp.Dispose();
-            throw;
-        }
-
-        return bmp;
+            return bmp;
+        });
     }
 }

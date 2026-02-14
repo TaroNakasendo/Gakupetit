@@ -30,9 +30,7 @@ class E004_RandomDot(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), I
     protected override Bitmap Masking(int v, Color color, Bitmap srcBitmap, Bitmap maskBitmap)
     {
         Random rnd = new(1000);
-        Bitmap bmp = new(srcBitmap);
-
-        try
+        return CreateBitmap(srcBitmap, bmp =>
         {
             // bitmapをメモリ上にロックします
             Rectangle rect = new(0, 0, bmp.Width, bmp.Height);
@@ -62,13 +60,7 @@ class E004_RandomDot(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), I
             Marshal.Copy(outRgbValues, 0, outPtr, size);
             maskBitmap.UnlockBits(inBmpData);
             bmp.UnlockBits(outBmpData);
-        }
-        catch (Exception)
-        {
-            bmp.Dispose();
-            throw;
-        }
-
-        return bmp;
+            return bmp;
+        });
     }
 }

@@ -22,10 +22,7 @@ class E024_UserDefined(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects),
     {
         var w = srcBitmap.Width;
         var h = srcBitmap.Height;
-
-        Bitmap bmp = new(srcBitmap);
-
-        try
+        return CreateBitmap(srcBitmap, bmp =>
         {
             using var g = Graphics.FromImage(bmp);
             g.Clear(Color.White);
@@ -57,15 +54,18 @@ class E024_UserDefined(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects),
             }
 
             // ガウスぼかしとする
-            bmp = Blur.BlurMask(bmp, w, h, v);
-            bmp = Masking(v, color, srcBitmap, bmp);
-        }
-        catch (Exception)
-        {
-            bmp.Dispose();
-            throw;
-        }
-
-        return bmp;
+            var blurred = Blur.BlurMask(bmp, w, h, v);
+            try
+            {
+                return Masking(v, color, srcBitmap, blurred);
+            }
+            finally
+            {
+                if (!ReferenceEquals(blurred, bmp))
+                {
+                    blurred?.Dispose();
+                }
+            }
+        });
     }
 }

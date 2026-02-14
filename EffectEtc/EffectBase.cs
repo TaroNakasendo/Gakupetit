@@ -21,6 +21,25 @@ abstract class EffectBase
 
     static protected int SliderMax => 100;
 
+    protected static Bitmap CreateBitmap(Bitmap srcBitmap, Func<Bitmap, Bitmap> action)
+    {
+        var bmp = new Bitmap(srcBitmap);
+        try
+        {
+            var result = action(bmp);
+            if (!ReferenceEquals(result, bmp))
+            {
+                bmp.Dispose();
+            }
+            return result;
+        }
+        catch
+        {
+            bmp.Dispose();
+            throw;
+        }
+    }
+
     static protected void SetPixel(byte[] ptr, int offset, Color color)
     {
         ptr[offset] = color.B;

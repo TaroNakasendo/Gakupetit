@@ -18,18 +18,12 @@ class E000_Fade(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEffec
         // 0のときは元画像を返す
         if (v == 0) return srcBitmap;
 
-        Bitmap bmp = new(srcBitmap);
-        try
+        return CreateBitmap(srcBitmap, bmp =>
         {
             using var g = Graphics.FromImage(bmp);
             using SolidBrush sb = new(Color.FromArgb(255 * v / SliderMax, color));
             g.FillRectangle(sb, new Rectangle(Point.Empty, bmp.Size));
-        }
-        catch (Exception)
-        {
-            bmp.Dispose();
-            throw;
-        }
-        return bmp;
+            return bmp;
+        });
     }
 }

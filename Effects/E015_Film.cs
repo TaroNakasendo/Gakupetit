@@ -19,9 +19,7 @@ class E015_Film : EffectBase, IEffect
 
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)
     {
-        Bitmap bmp = new(srcBitmap);
-
-        try
+        return CreateBitmap(srcBitmap, bmp =>
         {
             var version = Application.ProductVersion[0];
 
@@ -87,13 +85,9 @@ class E015_Film : EffectBase, IEffect
                 s = Path.GetFileNameWithoutExtension(BitmapEffects.LongFileName);
                 DrawString(g, sPitch, s);
             }
-        }
-        catch (Exception)
-        {
-            bmp.Dispose();
-            throw;
-        }
-        return bmp;
+
+            return bmp;
+        });
     }
 
     static private void DrawString(Graphics g, float sPitch, string s)

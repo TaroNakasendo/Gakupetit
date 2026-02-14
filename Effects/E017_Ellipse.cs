@@ -20,10 +20,7 @@ class E017_Ellipse : EffectBase, IEffect
     {
         var w = srcBitmap.Width;
         var h = srcBitmap.Height;
-
-        Bitmap bmp = new(srcBitmap);
-
-        try
+        return CreateBitmap(srcBitmap, bmp =>
         {
             var max = w > h ? h : w;
             var scale = 2 * v * max / 10 / 100 + 1;
@@ -37,15 +34,20 @@ class E017_Ellipse : EffectBase, IEffect
             g.FillEllipse(sb, rect);
 
             // ガウスぼかしとする
-            bmp = Blur.BlurMask(bmp, w, h, v);
-            bmp = Masking(v, color, srcBitmap, bmp);
-        }
-        catch (Exception)
-        {
-            bmp.Dispose();
-            throw;
-        }
-
-        return bmp;
+            var blurred = Blur.BlurMask(bmp, w, h, v);
+            try
+            {
+                return Masking(v, color, srcBitmap, blurred);
+            }
+            finally
+            {
+                // If Blur.BlurMask created a new bitmap, dispose it here to avoid leaks.
+                // If it returned the original bmp, let CreateBitmap manage its lifetime.
+                if (!object.ReferenceEquals(blurred, bmp))
+                {
+                    blurred?.Dispose();
+                }
+            }
+        });
     }
 }

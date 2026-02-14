@@ -21,10 +21,7 @@ class E003_Circle(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEff
     {
         int w = srcBitmap.Width;
         int h = srcBitmap.Height;
-
-        Bitmap bmp = new(srcBitmap);
-
-        try
+        return CreateBitmap(srcBitmap, bmp =>
         {
             using var g = Graphics.FromImage(bmp);
             g.Clear(Color.White);
@@ -80,15 +77,8 @@ class E003_Circle(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEff
             // byte列をbitmapに復元し、メモリのロックを開放する
             Marshal.Copy(outRgbValues, 0, outPtr, size);
             bmp.UnlockBits(outBmpData);
-            bmp = Masking(v, color, srcBitmap, bmp);
-        }
-        catch (Exception)
-        {
-            bmp.Dispose();
-            throw;
-        }
-
-        return bmp;
+            return Masking(v, color, srcBitmap, bmp);
+        });
     }
 
 }

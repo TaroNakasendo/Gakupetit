@@ -21,10 +21,7 @@ class E021_Crt(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEffect
     {
         var w = srcBitmap.Width;
         var h = srcBitmap.Height;
-
-        // 出力用ビットマップ
-        Bitmap retBmp = new(srcBitmap);
-        try
+        return CreateBitmap(srcBitmap, retBmp =>
         {
             // ブラウン管型の切り取りマスク(中央が黒)
             Bitmap clopMask = new(srcBitmap);
@@ -105,14 +102,8 @@ class E021_Crt(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEffect
             // 効果を高めるため、自分で自分にマスク
             shiftedClopMask = Masking(v * 7 / 10, color, shiftedClopMask, shiftedClopMask);
             retBmp = base.Masking(v, Color.White, dentBmp, shiftedClopMask);
-        }
-        catch (Exception)
-        {
-            retBmp.Dispose();
-            throw;
-        }
-
-        return retBmp;
+            return retBmp;
+        });
     }
 
     private static Bitmap CreateNegativeMask(Image img, bool useOnlyLeftTop = false)
@@ -151,9 +142,7 @@ class E021_Crt(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEffect
     /// <returns>ビットマップ</returns>
     protected override Bitmap Masking(int v, Color color, Bitmap srcBitmap, Bitmap maskBitmap)
     {
-        Bitmap bmp = new(srcBitmap);
-
-        try
+        return CreateBitmap(srcBitmap, bmp =>
         {
             // bitmapをメモリ上にロックします
             var w = bmp.Width;
@@ -190,13 +179,7 @@ class E021_Crt(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEffect
             Marshal.Copy(outRgbValues, 0, outPtr, size);
             maskBitmap.UnlockBits(inBmpData);
             bmp.UnlockBits(outBmpData);
-        }
-        catch (Exception)
-        {
-            bmp.Dispose();
-            throw;
-        }
-
-        return bmp;
+            return bmp;
+        });
     }
 }
