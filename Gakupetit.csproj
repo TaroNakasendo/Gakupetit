@@ -16,7 +16,7 @@
     <Platforms>AnyCPU;ARM32;ARM64;x64;x86</Platforms>
     <DebugType>portable</DebugType>
     <NoWarn>1701;1702</NoWarn>
-    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <ApplicationHighDpiMode>SystemAware</ApplicationHighDpiMode>
     <StartupObject>Com.Nakasendo.Gakupetit.Program</StartupObject>
 
     <!-- Added to avoid MSBuild attempting to locate WinRT.Runtime.dll when it's not present.
