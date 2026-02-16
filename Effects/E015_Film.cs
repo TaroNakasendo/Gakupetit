@@ -1,6 +1,5 @@
 ﻿using Com.Nakasendo.Gakupetit.EffectEtc;
 using System.Drawing.Drawing2D;
-using System.Drawing.Text;
 using static System.Math;
 
 namespace Com.Nakasendo.Gakupetit.Effects;
@@ -95,7 +94,6 @@ class E015_Film : EffectBase, IEffect
     {
         if (sPitch / 2 < 1) sPitch = 1;
 
-        g.TextRenderingHint = TextRenderingHint.ClearTypeGridFit;
         using Font f = new(FontFamily.GenericMonospace, sPitch * 0.7f * 96 / g.DpiX);
         using SolidBrush sb = new(Color.OrangeRed);
         g.DrawString(s, f, sb, new Point(0, 0));
