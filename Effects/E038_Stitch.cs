@@ -32,7 +32,7 @@ class E038_Stitch(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEff
             // パラメータ調整
             var minSide = Math.Min(w, h);
             // 毛糸っぽさを出すため、少し太めにする
-            float penWidth = Math.Max(3.0f, minSide / 200.0f); 
+            float penWidth = Math.Max(3.0f, minSide / 200.0f);
             float margin = minSide / 20.0f;
 
             // vの値に応じて、縫い目の長さと不揃いさを変える
@@ -46,7 +46,7 @@ class E038_Stitch(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEff
             using var pen = new Pen(color, penWidth);
             pen.StartCap = LineCap.Round;
             pen.EndCap = LineCap.Round;
-            
+
             // 影ペン（少し太く、薄く）
             using var shadowPen = new Pen(Color.FromArgb(80, 0, 0, 0), penWidth * 1.2f);
             shadowPen.StartCap = LineCap.Round;
@@ -82,12 +82,12 @@ class E038_Stitch(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEff
         float dx = x2 - x1;
         float dy = y2 - y1;
         float dist = (float)Math.Sqrt(dx * dx + dy * dy);
-        
+
         // 正規化
         if (dist == 0) return;
         float nx = dx / dist;
         float ny = dy / dist;
-        
+
         // 直交ベクトル（揺らぎ用）
         float px = -ny;
         float py = nx;
@@ -100,7 +100,7 @@ class E038_Stitch(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEff
         {
             // 今回の縫い目の長さ（少しランダムにする）
             float stitchLen = step * 0.6f + (float)(rnd.NextDouble() * step * 0.4f);
-            
+
             // 隙間（次の開始位置まで）
             float gapLen = step * 0.3f + (float)(rnd.NextDouble() * step * 0.2f);
 
@@ -125,7 +125,7 @@ class E038_Stitch(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEff
             float pShift2 = (float)(rnd.NextDouble() - 0.5) * jitter * 0.5f;
 
             PointF pStart = new PointF(sx + nx * j1 + px * pShift1, sy + ny * j1 + py * pShift1);
-            PointF pEnd   = new PointF(ex + nx * j2 + px * pShift2, ey + ny * j2 + py * pShift2);
+            PointF pEnd = new PointF(ex + nx * j2 + px * pShift2, ey + ny * j2 + py * pShift2);
 
             // 影を描画（少し右下にずらす）
             float shadowOffset = pen.Width * 0.3f;

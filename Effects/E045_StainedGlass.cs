@@ -19,7 +19,7 @@ class E045_StainedGlass(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects)
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)
     {
         if (srcBitmap == null) throw new ArgumentNullException(nameof(srcBitmap));
-        
+
         Bitmap bmp = new(srcBitmap);
         if (v == 0) return bmp;
 

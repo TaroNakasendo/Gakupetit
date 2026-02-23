@@ -32,7 +32,7 @@ class E040_MaskingTape(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects),
             var minSide = Math.Min(w, h);
             // テープの幅
             float tapeWidth = Math.Max(10.0f, minSide * v / 400.0f);
-            
+
             // 色の設定（半透明にする）
             // 指定色のアルファ値をベースにし、極端に高い場合は少し抑える
             int alpha = color.A;
@@ -69,7 +69,7 @@ class E040_MaskingTape(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects),
     {
         // テープの形を多角形（Path）で作成する
         using GraphicsPath path = new GraphicsPath();
-        
+
         float margin = width * 0.1f;
         int segments = 20; // ギザギザの細かさ
 

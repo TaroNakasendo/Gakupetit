@@ -33,10 +33,10 @@ class E044_IvyFrame(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IE
 
             // 枠の太さの目安
             float borderSize = Math.Min(w, h) * 0.15f;
-            
+
             // つるの数
             int vineCount = Math.Max(1, v / 10);
-            
+
             using var pen = new Pen(color, borderSize * 0.05f);
             pen.StartCap = LineCap.Round;
             pen.EndCap = LineCap.Round;
@@ -66,7 +66,7 @@ class E044_IvyFrame(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IE
         {
             List<PointF> points = new();
             int segments = (int)(length / (borderSize * 0.4f)) + 3;
-            
+
             // つるの基本となる波打ち
             float waveFreq = (float)(0.5 + rnd.NextDouble() * 1.5);
             float waveAmp = borderSize * 0.4f;
@@ -77,15 +77,15 @@ class E044_IvyFrame(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IE
                 float t = (float)j / segments;
                 float px = x1 + (x2 - x1) * t;
                 float py = y1 + (y2 - y1) * t;
-                
+
                 // サイン波でゆらゆらさせる
                 float offset = (float)Math.Sin(t * segments * waveFreq + phase) * waveAmp;
                 // さらにランダムなノイズ
                 offset += (float)(rnd.NextDouble() - 0.5) * (borderSize * 0.2f);
-                
+
                 if (isHorizontal) py += offset;
                 else px += offset;
-                
+
                 points.Add(new PointF(px, py));
             }
 
@@ -98,13 +98,13 @@ class E044_IvyFrame(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IE
                 for (int j = 1; j < points.Count - 1; j++)
                 {
                     PointF p = points[j];
-                    
+
                     // 葉っぱ
                     if (rnd.NextDouble() < 0.6)
                     {
                         // 前後の点から進行方向を計算
-                        float dx = points[j+1].X - points[j-1].X;
-                        float dy = points[j+1].Y - points[j-1].Y;
+                        float dx = points[j + 1].X - points[j - 1].X;
+                        float dy = points[j + 1].Y - points[j - 1].Y;
                         float baseAngle = (float)(Math.Atan2(dy, dx) * 180 / Math.PI);
 
                         DrawLeaf(g, rnd, p, borderSize * 0.4f, color, baseAngle);
@@ -144,11 +144,11 @@ class E044_IvyFrame(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IE
         float size = (float)(rnd.NextDouble() * 0.4 + 0.6) * maxSize;
         // 進行方向に対して左右に振る
         float angle = baseAngle + (rnd.Next(0, 2) == 0 ? 60 : -60) + (float)(rnd.NextDouble() * 20 - 10);
-        
+
         int r = Math.Clamp(color.R + rnd.Next(-20, 21), 0, 255);
         int g_col = Math.Clamp(color.G + rnd.Next(-20, 21), 0, 255);
         int b = Math.Clamp(color.B + rnd.Next(-20, 21), 0, 255);
-        
+
         g.TranslateTransform(p.X, p.Y);
         g.RotateTransform(angle);
 
@@ -175,13 +175,13 @@ class E044_IvyFrame(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IE
             g.FillPath(leafBrush, path);
 
             // 葉脈 (少し明るい色 or 暗い色)
-            using var veinPen = new Pen(Color.FromArgb(color.A / 2, 
-                Math.Clamp(r + 30, 0, 255), 
-                Math.Clamp(g_col + 30, 0, 255), 
+            using var veinPen = new Pen(Color.FromArgb(color.A / 2,
+                Math.Clamp(r + 30, 0, 255),
+                Math.Clamp(g_col + 30, 0, 255),
                 Math.Clamp(b + 30, 0, 255)), 0.5f);
             g.DrawLine(veinPen, 0, 0, size * 0.8f, 0);
         }
-        
+
         g.ResetTransform();
     }
 }

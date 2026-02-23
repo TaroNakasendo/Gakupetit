@@ -80,10 +80,10 @@ class E039_BrushStroke(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects),
             // 各毛（bristle）の透明度を変えることで「かすれ」を表現
             int alpha = 100 + rnd.Next(155);
             using var pen = new Pen(Color.FromArgb(alpha, color), 1.0f + (float)rnd.NextDouble() * 2.0f);
-            
+
             // 毛ごとに長さを微妙に変える（はみ出しを表現）
             float overshootStart = (float)(rnd.NextDouble() - 0.5) * width * 0.8f;
-            float overshootEnd   = (float)(rnd.NextDouble() - 0.5) * width * 0.8f;
+            float overshootEnd = (float)(rnd.NextDouble() - 0.5) * width * 0.8f;
 
             // 基準点にオフセットを加える
             float sx = x1 + px * offset + nx * overshootStart;
@@ -101,7 +101,7 @@ class E039_BrushStroke(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects),
         float dx = x2 - x1;
         float dy = y2 - y1;
         float dist = (float)Math.Sqrt(dx * dx + dy * dy);
-        
+
         int segments = 4;
         float sx = x1;
         float sy = y1;
@@ -115,7 +115,7 @@ class E039_BrushStroke(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects),
             // 垂直方向に少しゆらす
             float nx = -(y2 - y1) / dist;
             float ny = (x2 - x1) / dist;
-            
+
             if (i < segments)
             {
                 tx += nx * (float)(rnd.NextDouble() - 0.5) * wave;

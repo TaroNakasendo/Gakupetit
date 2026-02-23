@@ -156,8 +156,8 @@ static class DrawLed
         // :
         if ((bitFlag & 0x80) != 0)
         {
-            g.FillEllipse(brush, new　RectangleF(x + 85 * c, y + 58 * c, 42 * c, 42 * c));
-            g.FillEllipse(brush, new　RectangleF(x + 63 * c, y + 185 * c, 42 * c, 42 * c));
+            g.FillEllipse(brush, new RectangleF(x + 85 * c, y + 58 * c, 42 * c, 42 * c));
+            g.FillEllipse(brush, new RectangleF(x + 63 * c, y + 185 * c, 42 * c, 42 * c));
         }
     }
 }

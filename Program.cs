@@ -1,5 +1,3 @@
-using Com.Nakasendo.Gakupetit.Properties;
-
 namespace Com.Nakasendo.Gakupetit;
 
 internal static class Program

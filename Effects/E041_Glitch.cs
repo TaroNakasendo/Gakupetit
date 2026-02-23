@@ -47,7 +47,7 @@ class E041_Glitch(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEff
             using var g = Graphics.FromImage(bmp);
             // 元画像を背景として描画
             g.DrawImage(srcBitmap, 0, 0, w, h);
-            
+
             // エフェクト用の一時バッファ
             using Bitmap effectBmp = new(w, h);
             using (var gEff = Graphics.FromImage(effectBmp))
@@ -69,11 +69,11 @@ class E041_Glitch(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEff
                     if (r < 0.15 * intensity) offsetX = (int)((rundomGenerator.NextDouble() - 0.5) * w * 0.2 * intensity);
                     else if (r < 0.4 * intensity) offsetX = (int)((rundomGenerator.NextDouble() - 0.5) * w * 0.05 * intensity);
 
-                    gEff.DrawImage(srcBitmap, 
-                        new Rectangle(offsetX, currentY, w, sliceHeight), 
-                        new Rectangle(0, currentY, w, sliceHeight), 
+                    gEff.DrawImage(srcBitmap,
+                        new Rectangle(offsetX, currentY, w, sliceHeight),
+                        new Rectangle(0, currentY, w, sliceHeight),
                         GraphicsUnit.Pixel);
-                    
+
                     currentY += sliceHeight;
                 }
 
@@ -95,7 +95,7 @@ class E041_Glitch(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEff
             // EffectBase.Masking を利用して、maskBmpが黒い部分にeffectBmpを、白い部分に元のままを適用する
             // Maskingの実装は「maskが0(黒)でない場合にcolorに近づける」ロジックなので、
             // ここでは自前でマスク合成を行うか、Maskingの仕組みに合わせる
-            
+
             // シンプルに枠の部分だけをg.DrawImageで上書きする（マスクとして透過処理）
             using (ImageAttributes ia = new ImageAttributes())
             {
@@ -122,7 +122,7 @@ class E041_Glitch(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEff
                     {
                         int i = offset + x * 4;
                         // マスクが黒(0,0,0)に近いほどエフェクトを強くかける
-                        float m = 1.0f - (maskRgb[i] / 255.0f); 
+                        float m = 1.0f - (maskRgb[i] / 255.0f);
                         if (m > 0)
                         {
                             outRgb[i + 0] = (byte)(outRgb[i + 0] * (1 - m) + effRgb[i + 0] * m);
@@ -159,9 +159,9 @@ class E041_Glitch(BitmapEffects bitmapEffects) : EffectBase(bitmapEffects), IEff
         });
         ia.SetColorMatrix(cm);
 
-        g.DrawImage(src, 
-            new Rectangle((int)dx, (int)dy, src.Width, src.Height), 
-            0, 0, src.Width, src.Height, 
+        g.DrawImage(src,
+            new Rectangle((int)dx, (int)dy, src.Width, src.Height),
+            0, 0, src.Width, src.Height,
             GraphicsUnit.Pixel, ia);
     }
 }

@@ -39,11 +39,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\README.md">
+    <None Include="README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
-    <None Include="Gakupetit.Package\Gakupetit.Package.wapproj" />
   </ItemGroup>
 
   <ItemGroup>

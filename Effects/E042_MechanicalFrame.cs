@@ -51,7 +51,7 @@ class E042_MechanicalFrame(BitmapEffects bitmapEffects) : EffectBase(bitmapEffec
             // 上部パネル（全幅）
             [
                 new(0, 0), new(w, 0),
-                new(w, fs), 
+                new(w, fs),
                 new(w * 0.7f, fs), new(w * 0.65f, fs * 1.3f),
                 new(w * 0.35f, fs * 1.3f), new(w * 0.3f, fs),
                 new(0, fs)
@@ -91,7 +91,7 @@ class E042_MechanicalFrame(BitmapEffects bitmapEffects) : EffectBase(bitmapEffec
     {
         using GraphicsPath path = new();
         path.AddPolygon(points);
-        
+
         var bounds = GetBounds(points);
         // より輝くメタリック質感（鏡面反射をシミュレート）
         using (var br = new LinearGradientBrush(bounds, darkCol, lightCol, 60f))
@@ -154,7 +154,7 @@ class E042_MechanicalFrame(BitmapEffects bitmapEffects) : EffectBase(bitmapEffec
         g.SetClip(path);
         using var hPen = new Pen(Color.FromArgb(40, Color.Black), 1f);
         using var hPenL = new Pen(Color.FromArgb(30, Color.White), 1f);
-        
+
         float step = 2.0f;
         for (float y = bounds.Top; y < bounds.Bottom; y += step)
         {
@@ -211,10 +211,13 @@ class E042_MechanicalFrame(BitmapEffects bitmapEffects) : EffectBase(bitmapEffec
     private static void DrawLCDPanelInSlot(Graphics g, RectangleF slot, float fs, Color darkCol, Random rand)
     {
         float dw, dh;
-        if (slot.Height > slot.Width) {
+        if (slot.Height > slot.Width)
+        {
             dw = slot.Width * 0.85f;
             dh = Math.Min(slot.Height * 0.85f, fs * 1.5f);
-        } else {
+        }
+        else
+        {
             dw = Math.Min(slot.Width * 0.85f, fs * 1.5f);
             dh = slot.Height * 0.85f;
         }
@@ -268,7 +271,7 @@ class E042_MechanicalFrame(BitmapEffects bitmapEffects) : EffectBase(bitmapEffec
         // ハードコードされたラベルを定数化し、保守性・ローカライズ性を向上
         string[] labels = LcdPanelLabels;
         string label = labels[rand.Next(labels.Length)];
-        
+
         using Font font = new("Consolas", fs * 0.16f, FontStyle.Bold);
         g.DrawString(label, font, tBr, r.Left + 1, r.Top + 1);
 

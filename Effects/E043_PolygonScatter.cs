@@ -34,7 +34,7 @@ class E043_PolygonScatter(BitmapEffects bitmapEffects) : EffectBase(bitmapEffect
 
             // 描画する多角形の数
             int count = v * 3;
-            
+
             // 枠の範囲 (少し狭める)
             float borderSize = Math.Min(w, h) * 0.2f;
 
@@ -47,7 +47,7 @@ class E043_PolygonScatter(BitmapEffects bitmapEffects) : EffectBase(bitmapEffect
                 // 位置の決定 (枠の外縁に強く寄せる)
                 float cx, cy;
                 double edgeSelector = rnd.NextDouble();
-                
+
                 // 距離の分布を調整 (2乗することで端に集中させる)
                 // 少しマイナス値（画像の外側）も許容して、外側から重なるようにする
                 float dist = (float)(Math.Pow(rnd.NextDouble(), 2.0) * borderSize) - (borderSize * 0.1f);
