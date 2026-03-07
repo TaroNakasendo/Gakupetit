@@ -25,7 +25,14 @@
     <CsWinRTGenerateInteropAssembly>false</CsWinRTGenerateInteropAssembly>
     <SupportedOSPlatformVersion>10.0.26100.1</SupportedOSPlatformVersion>
   </PropertyGroup>
-
+  <PropertyGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows' and '$(Configuration)' == 'Release'">
+    <WindowsPackageType>Package</WindowsPackageType>
+    <AppxPackageSigningEnabled>true</AppxPackageSigningEnabled>
+    <PackageCertificateThumbprint>5DFFEE37FBA061ADB1C36AF10DDFEF7BE7038E3A</PackageCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows' and '$(RuntimeIdentifierOverride)' != ''">
+    <RuntimeIdentifier>$(RuntimeIdentifierOverride)</RuntimeIdentifier>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)'=='Debug'">
     <DebugType>portable</DebugType>
   </PropertyGroup>

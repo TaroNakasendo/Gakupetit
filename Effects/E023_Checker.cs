@@ -17,6 +17,8 @@ class E023_Checker : EffectBase, IEffect
 
     public Bitmap DoEffect(int v, Color color, Bitmap srcBitmap)
     {
+        ArgumentNullException.ThrowIfNull(srcBitmap);
+
         Bitmap bmp = new(srcBitmap);
 
         try
