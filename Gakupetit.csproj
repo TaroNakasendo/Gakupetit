@@ -2,7 +2,8 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net10.0-windows10.0.26100.1</TargetFramework>
+    <TargetFramework>net10.0-windows10.0.17763.0</TargetFramework>
+    <RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
     <Nullable>enable</Nullable>
     <UseWindowsForms>True</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -17,21 +18,9 @@
     <DebugType>portable</DebugType>
     <NoWarn>1701;1702</NoWarn>
     <ApplicationHighDpiMode>SystemAware</ApplicationHighDpiMode>
+    <GenerateResourceWarnOnBinaryFormatterUse>false</GenerateResourceWarnOnBinaryFormatterUse>
     <StartupObject>Com.Nakasendo.Gakupetit.Program</StartupObject>
-
-    <!-- Added to avoid MSBuild attempting to locate WinRT.Runtime.dll when it's not present.
-         This prevents the '[System.IO.Path]::GetDirectoryName('')' error. -->
-    <IncludeWindowsSDKRefFrameworkReferences>false</IncludeWindowsSDKRefFrameworkReferences>
-    <CsWinRTGenerateInteropAssembly>false</CsWinRTGenerateInteropAssembly>
-    <SupportedOSPlatformVersion>10.0.26100.1</SupportedOSPlatformVersion>
-  </PropertyGroup>
-  <PropertyGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows' and '$(Configuration)' == 'Release'">
-    <WindowsPackageType>Package</WindowsPackageType>
-    <AppxPackageSigningEnabled>true</AppxPackageSigningEnabled>
-    <PackageCertificateThumbprint>5DFFEE37FBA061ADB1C36AF10DDFEF7BE7038E3A</PackageCertificateThumbprint>
-  </PropertyGroup>
-  <PropertyGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows' and '$(RuntimeIdentifierOverride)' != ''">
-    <RuntimeIdentifier>$(RuntimeIdentifierOverride)</RuntimeIdentifier>
+    <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)'=='Debug'">
     <DebugType>portable</DebugType>
@@ -119,3 +108,4 @@
   </ItemGroup>
 
 </Project>
+
