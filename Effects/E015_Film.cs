@@ -23,7 +23,8 @@ class E015_Film : EffectBase, IEffect
 
         try
         {
-            var version = Application.ProductVersion[0];
+            var productVersion = Application.ProductVersion;
+            var version = string.IsNullOrEmpty(productVersion) ? '?' : productVersion[0];
 
             var s = $"{Application.ProductName.ToUpper()}!{version} FILM        ©2005-{BitmapEffects.ShotDateTime.Year}";
 

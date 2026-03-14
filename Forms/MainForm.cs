@@ -1139,10 +1139,11 @@ internal partial class MainForm : Form
     /// <param name="e"></param>
     private void EffectMenuItem_Click(object sender, EventArgs e)
     {
-        var tsi = (ToolStripItem)sender;
-
-        // 選択したメニューに設定されているTagを取得
-        var effectNo = int.Parse(tsi.Tag.ToString()!, CultureInfo.CurrentCulture);
+        if (sender is not ToolStripItem tsi || tsi.Tag is null ||
+            !int.TryParse(tsi.Tag.ToString(), NumberStyles.Integer, CultureInfo.CurrentCulture, out var effectNo))
+        {
+            return;
+        }
 
         // 設定の保存
         appSettings.Effect = effectNo;
