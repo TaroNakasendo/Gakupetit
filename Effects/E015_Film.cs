@@ -26,7 +26,8 @@ class E015_Film : EffectBase, IEffect
             var productVersion = Application.ProductVersion;
             var version = string.IsNullOrEmpty(productVersion) ? '?' : productVersion[0];
 
-            var s = $"{Application.ProductName.ToUpper()}!{version} FILM        ©2005-{BitmapEffects.ShotDateTime.Year}";
+            var productName = Application.ProductName?.ToUpper() ?? "GAKUPETIT";
+            var s = $"{productName}!{version} FILM        ©2005-{BitmapEffects.ShotDateTime.Year}";
 
             using var g = Graphics.FromImage(bmp);
             g.SmoothingMode = SmoothingMode.AntiAlias;

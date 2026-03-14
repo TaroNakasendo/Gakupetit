@@ -7,17 +7,17 @@ public partial class SizeForm : Form
     /// <summary>
     /// ビットマップの幅
     /// </summary>
-    public int BmpWidth { get; set; }
+    internal int BmpWidth;
 
     /// <summary>
     /// ビットマップの高さ
     /// </summary>
-    public int BmpHeight { get; set; }
+    internal int BmpHeight;
 
     /// <summary>
     /// リサイズモード
     /// </summary>
-    public byte ResizeType { get; set; }
+    internal byte ResizeType;
 
     /// <summary>
     /// コンストラクタ
