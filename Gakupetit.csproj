@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net10.0-windows10.0.17763.0</TargetFramework>
+    <TargetFramework>net10.0-windows10.0.22621.0</TargetFramework>
     <RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
     <Nullable>enable</Nullable>
     <UseWindowsForms>True</UseWindowsForms>
@@ -16,11 +16,12 @@
     <NeutralLanguage>en</NeutralLanguage>
     <Platforms>AnyCPU;ARM32;ARM64;x64;x86</Platforms>
     <DebugType>portable</DebugType>
-    <NoWarn>1701;1702</NoWarn>
+    <NoWarn>1701;1702;NETSDK1229</NoWarn>
     <ApplicationHighDpiMode>SystemAware</ApplicationHighDpiMode>
     <GenerateResourceWarnOnBinaryFormatterUse>false</GenerateResourceWarnOnBinaryFormatterUse>
     <StartupObject>Com.Nakasendo.Gakupetit.Program</StartupObject>
-    <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion>10.0.22621.0</SupportedOSPlatformVersion>
+    <CsWinRTGenerateInteropAssembly>false</CsWinRTGenerateInteropAssembly>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)'=='Debug'">
     <DebugType>portable</DebugType>
